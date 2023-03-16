@@ -1,0 +1,2528 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>cook-jar documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">cook-jar documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Classes</li>
+  <li >DbService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/classes/Database.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This class uses the Dexie library to access the IndexedDB database system and store data locally.
+This is especially useful to save data for the offline access. The class has one table for each object it wants
+to store:</p>
+<ul>
+<li>Recipes: Local and custom recipes of the user</li>
+<li>Beers: Beer objects</li>
+<li>Favorites: Recipes the user marked as favorites</li>
+</ul>
+
+            </p>
+
+            <p class="comment">
+                <h3>Extends</h3>
+            </p>
+            <p class="comment">
+                    <code>Dexie</code>
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addBeer" >addBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addFavorite" >addFavorite</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#addRecipe" >addRecipe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteAllBeer" >deleteAllBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteAllFavorites" >deleteAllFavorites</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteAllRecipes" >deleteAllRecipes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteBeer" >deleteBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteFavorites" >deleteFavorites</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteRecipe" >deleteRecipe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#exportDatabase" >exportDatabase</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getAllBeer" >getAllBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getAllFavorites" >getAllFavorites</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getAllRecipe" >getAllRecipe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBeer" >getBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBeerByIngredients" >getBeerByIngredients</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getBeerByTitle" >getBeerByTitle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFavorite" >getFavorite</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFavoriteByIngredients" >getFavoriteByIngredients</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getFavoriteByTitle" >getFavoriteByTitle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRecipe" >getRecipe</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRecipeByIngredients" >getRecipeByIngredients</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getRecipeByTitle" >getRecipeByTitle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#importDatabase" >importDatabase</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateBeer" >updateBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateFavorite" >updateFavorite</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#updateRecipe" >updateRecipe</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/classes/Database.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructor of the Database calls the super-constructor of Dexie to create a new db
+with a specific name. It also sets the Indexes of each object we want to store and a version
+of the database. The version is important if we plan to add new table columns to the database tables.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>addBeer</b></span>
+                        <a href="#addBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addBeer(beer: <a href="../classes/Beer.html" target="_self">Beer</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a single beer to the table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer</td>
+                                    <td>
+                                                <code><a href="../classes/Beer.html" target="_self" >Beer</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The beer you want to add</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a result string</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFavorite"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>addFavorite</b></span>
+                        <a href="#addFavorite"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addFavorite(recipe: <a href="../classes/Recipe.html" target="_self">Recipe</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a single favorite recipe to the table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe</td>
+                                    <td>
+                                                <code><a href="../classes/Recipe.html" target="_self" >Recipe</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The favorite recipe you want to add</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a result string</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addRecipe"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>addRecipe</b></span>
+                        <a href="#addRecipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addRecipe(recipe: <a href="../classes/Recipe.html" target="_self">Recipe</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Adds a single recipe to the table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe</td>
+                                    <td>
+                                                <code><a href="../classes/Recipe.html" target="_self" >Recipe</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The recipe you want to add</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a result string</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteAllBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteAllBeer</b></span>
+                        <a href="#deleteAllBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteAllBeer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="234"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:234</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes all beer</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>void</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteAllFavorites"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteAllFavorites</b></span>
+                        <a href="#deleteAllFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteAllFavorites()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes all favorites</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>void</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteAllRecipes"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteAllRecipes</b></span>
+                        <a href="#deleteAllRecipes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteAllRecipes()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="222"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:222</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes all recipes</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>unknown</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>void</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteBeer</b></span>
+                        <a href="#deleteBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteBeer(beer_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="201"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:201</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a beer by a given ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The beer ID of the beer you want to delete</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Nothing</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFavorites"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteFavorites</b></span>
+                        <a href="#deleteFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteFavorites(fav_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="210"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:210</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a favorited recipe by a given ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fav_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The favorite ID of the recipe you want to delete</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Nothing</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteRecipe"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>deleteRecipe</b></span>
+                        <a href="#deleteRecipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteRecipe(recipe_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="192"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:192</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Deletes a recipe by a given ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The recipe ID of the recipe you want to delete</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Nothing</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exportDatabase"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>exportDatabase</b></span>
+                        <a href="#exportDatabase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>exportDatabase()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="337"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:337</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Exports the database by creating a json file and using the FileSaver library</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getAllBeer</b></span>
+                        <a href="#getAllBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllBeer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="131"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:131</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all beers from the local database</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Promise&lt;Beer[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a Beer[] Array</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllFavorites"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getAllFavorites</b></span>
+                        <a href="#getAllFavorites"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllFavorites()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all favorite recipes from the local database</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a Recipe[] Array</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllRecipe"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getAllRecipe</b></span>
+                        <a href="#getAllRecipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllRecipe()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all recipes as an Recipe-Array from the local database</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a Recipe[] Array</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getBeer</b></span>
+                        <a href="#getBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeer(beer_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets a single beer or undefined from the beers table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The ID of the beer object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Promise&lt;Beer&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing the beer if found, else a promise reject</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeerByIngredients"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getBeerByIngredients</b></span>
+                        <a href="#getBeerByIngredients"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeerByIngredients(ingredients: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="311"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:311</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all Beer that contains given ingredients</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ingredients</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of ingredients you want to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Promise&lt;Beer[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing an Array of Beer</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeerByTitle"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getBeerByTitle</b></span>
+                        <a href="#getBeerByTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeerByTitle(beer_title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="275"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:275</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all Beer that somewaht equal the given title</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer_title</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The title you want to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Promise&lt;Beer[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing an Array of Beer</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFavorite"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getFavorite</b></span>
+                        <a href="#getFavorite"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFavorite(fav_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="104"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:104</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets a single recipe or undefined from the favorites table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fav_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The ID of the favorite recipe object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing the recipe if found, else a promise reject</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFavoriteByIngredients"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getFavoriteByIngredients</b></span>
+                        <a href="#getFavoriteByIngredients"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFavoriteByIngredients(ingredients: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="323"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:323</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all favorite Recipes that contain given ingredients</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ingredients</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of ingredients you want to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing an Array of Recipes</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFavoriteByTitle"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getFavoriteByTitle</b></span>
+                        <a href="#getFavoriteByTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getFavoriteByTitle(fav_title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="287"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:287</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all favorited Recipes that somewhat equal the given title</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fav_title</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The title you want to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing an Array of Recipes</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRecipe"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getRecipe</b></span>
+                        <a href="#getRecipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRecipe(recipe_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets a single recipe or undefined from the recipes table</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The ID of the recipe object</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing the recipe if found, else a promise reject</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRecipeByIngredients"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getRecipeByIngredients</b></span>
+                        <a href="#getRecipeByIngredients"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRecipeByIngredients(ingredients: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="299"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:299</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all Recipes that containe given ingredients</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ingredients</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of ingredients you want to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing an Array of Recipes</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRecipeByTitle"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getRecipeByTitle</b></span>
+                        <a href="#getRecipeByTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRecipeByTitle(recipe_title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="263"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:263</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets all recipes that somewhat equal the given title</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe_title</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The title you want to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Promise&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing an Array of Recipes</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="importDatabase"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>importDatabase</b></span>
+                        <a href="#importDatabase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>importDatabase(file: File)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="350"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:350</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Imports the database from a given JSON file</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+                                    <td>
+                                            <code>File</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A JSON containing all the data of the Database</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>updateBeer</b></span>
+                        <a href="#updateBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateBeer(beer: <a href="../classes/Beer.html" target="_self">Beer</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="169"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:169</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates an existing beer by replacing it with a given new one.
+REMEMBER that the ID needs to remain unchanged</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer</td>
+                                    <td>
+                                                <code><a href="../classes/Beer.html" target="_self" >Beer</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The new recipe with new attributes</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a number indicating how many objects were changed</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateFavorite"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>updateFavorite</b></span>
+                        <a href="#updateFavorite"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateFavorite(recipe: <a href="../classes/Recipe.html" target="_self">Recipe</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="179"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:179</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates an existing favorite recipe by replacing it with a new one.
+REMEMBER that the ID must remain unchanged</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe</td>
+                                    <td>
+                                                <code><a href="../classes/Recipe.html" target="_self" >Recipe</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The new recipe with changed attributes</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a number indicating how many objects were changed</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateRecipe"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>updateRecipe</b></span>
+                        <a href="#updateRecipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>updateRecipe(recipe: <a href="../classes/Recipe.html" target="_self">Recipe</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="159"
+                            class="link-to-prism">src/app/shared/classes/Database.ts:159</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Updates an existing recipe by replacing it with a given new recipe.
+REMEMBER that the ID neews to remain unchanged</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe</td>
+                                    <td>
+                                                <code><a href="../classes/Recipe.html" target="_self" >Recipe</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The new recipe containing the new attributes</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;number&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Promise containing a number indicating how many objects were changed</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Recipe } from &#x27;./Recipe&#x27;;
+import { saveAs } from &#x27;file-saver&#x27;;
+import Dexie from &#x27;dexie&#x27;;
+import { Beer } from &#x27;./Beer&#x27;;
+
+/**
+ * This class uses the Dexie library to access the IndexedDB database system and store data locally.
+ * This is especially useful to save data for the offline access. The class has one table for each object it wants
+ * to store:
+ * - Recipes: Local and custom recipes of the user
+ * - Beers: Beer objects
+ * - Favorites: Recipes the user marked as favorites
+ */
+export class DbService extends Dexie {
+    /** Local recipes table */
+    private recipes!: Dexie.Table&lt;Recipe, string&gt;;
+    /** Local beer table */
+    private beers!: Dexie.Table&lt;Beer, string&gt;;
+    /** Local favorite recipe table */
+    private favorites!: Dexie.Table&lt;Recipe, string&gt;;
+
+    /**
+     * The constructor of the Database calls the super-constructor of Dexie to create a new db
+     * with a specific name. It also sets the Indexes of each object we want to store and a version
+     * of the database. The version is important if we plan to add new table columns to the database tables.
+     */
+    constructor() {
+        super(&#x27;cookjar-db&#x27;);
+        // Hier wird definiert nach was man suchen kann
+        this.version(1).stores({
+            recipes: &#x27;id, title, ingredients, languages, cooking_type, tags&#x27;,
+            beer: &#x27;id, name, brew_year, ingredients&#x27;,
+            favorites: &#x27;id, title, ingredients, languages, cooking_type, tags&#x27;
+        });
+        navigator.storage.estimate().then(storage&#x3D;&gt;console.log(&quot;Free storage for DB: &quot;, storage));
+    }
+
+/* -------------------------------------*
+ * ADDING OBJECTS                       *
+ * ------------------------------------ */
+
+    /**
+     * Adds a single recipe to the table
+     * @param {Recipe} recipe The recipe you want to add
+     * @returns {Promise} A Promise containing a result string
+    */
+    async addRecipe(recipe: Recipe): Promise&lt;string&gt; {
+        return this.recipes.add(recipe);
+    }
+
+    /**
+     * Adds a single beer to the table
+     * @param {Beer} beer The beer you want to add
+     * @returns {Promise} A Promise containing a result string
+    */
+    async addBeer(beer: Beer): Promise&lt;string&gt; {
+        return this.beers.add(beer);
+    }
+
+    /**
+     * Adds a single favorite recipe to the table
+     * @param {Recipe} recipe The favorite recipe you want to add
+     * @returns {Promise} A Promise containing a result string
+    */
+    async addFavorite(recipe: Recipe): Promise&lt;string&gt; {
+        return this.favorites.add(recipe);
+    }
+
+/* -------------------------------------*
+ * GETTING OBJECTS                      *
+ * ------------------------------------ */
+
+    /**
+     * Gets a single recipe or undefined from the recipes table
+     * @param {string} recipe_id The ID of the recipe object
+     * @returns {Promise} A Promise containing the recipe if found, else a promise reject
+    */
+    async getRecipe(recipe_id: string): Promise&lt;Recipe&gt; {
+        const recipe &#x3D; await this.recipes
+            .where(&#x27;id&#x27;)
+            .equals(recipe_id)
+            .first();
+        return recipe ? recipe : Promise.reject(&#x27;Recipe not found&#x27;);
+    }
+
+    /**
+     * Gets a single beer or undefined from the beers table
+     * @param {string} beer_id The ID of the beer object
+     * @returns {Promise} A Promise containing the beer if found, else a promise reject
+    */
+    async getBeer(beer_id: string): Promise&lt;Beer&gt; {
+        const beer &#x3D; await this.beers
+            .where(&#x27;id&#x27;)
+            .equals(beer_id)
+            .first();
+        return beer ? beer : Promise.reject(&#x27;Beer not found&#x27;);
+    }
+
+    /**
+     * Gets a single recipe or undefined from the favorites table
+     * @param {string} fav_id The ID of the favorite recipe object
+     * @returns {Promise} A Promise containing the recipe if found, else a promise reject
+    */
+    async getFavorite(fav_id: string): Promise&lt;Recipe&gt; {
+        const favorite &#x3D; await this.favorites
+            .where(&#x27;id&#x27;)
+            .equals(fav_id)
+            .first();
+        return favorite ? favorite : Promise.reject(&#x27;Favorite not found&#x27;);
+    }
+
+/* -------------------------------------*
+ * GETTING ALL OBJECTS                  *
+ * ------------------------------------ */
+
+    /**
+     * Retrieves all recipes as an Recipe-Array from the local database
+     * @returns {Promise} A Promise containing a Recipe[] Array
+     */
+    async getAllRecipe(): Promise&lt;Recipe[]&gt; {
+        return this.recipes
+            .where(&#x27;id&#x27;)
+            .notEqual(&#x27;&#x27;)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+    /**
+     * Retrieves all beers from the local database
+     * @returns {Promise} A Promise containing a Beer[] Array
+     */
+    async getAllBeer(): Promise&lt;Beer[]&gt; {
+        return this.beers
+            .where(&#x27;id&#x27;)
+            .notEqual(&#x27;&#x27;)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+    /**
+     * Retrieves all favorite recipes from the local database
+     * @returns {Promise} A Promise containing a Recipe[] Array
+     */
+    async getAllFavorites(): Promise&lt;Recipe[]&gt; {
+        return this.favorites
+            .where(&#x27;id&#x27;)
+            .notEqual(&#x27;&#x27;)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+/* -------------------------------------*
+ * UPDATING OBJECTS                     *
+ * ------------------------------------ */
+
+    /**
+     * Updates an existing recipe by replacing it with a given new recipe.
+     * REMEMBER that the ID neews to remain unchanged
+     * @param {Recipe} recipe The new recipe containing the new attributes
+     * @returns {Promise} A Promise containing a number indicating how many objects were changed
+     */
+    async updateRecipe(recipe: Recipe): Promise&lt;number&gt; {
+        return this.recipes.update(recipe.id, recipe);
+    }
+
+    /**
+     * Updates an existing beer by replacing it with a given new one.
+     * REMEMBER that the ID needs to remain unchanged
+     * @param {Beer} beer The new recipe with new attributes
+     * @returns {Promise} A Promise containing a number indicating how many objects were changed
+     */
+    async updateBeer(beer: Beer): Promise&lt;number&gt; {
+        return  this.beers.update(beer.id, beer);
+    }
+
+    /**
+     * Updates an existing favorite recipe by replacing it with a new one.
+     * REMEMBER that the ID must remain unchanged
+     * @param {Recipe} recipe The new recipe with changed attributes
+     * @returns {Promise} A Promise containing a number indicating how many objects were changed
+     */
+    async updateFavorite(recipe: Recipe): Promise&lt;number&gt; {
+        return this.favorites.update(recipe.id, recipe);
+    }
+
+/* -------------------------------------*
+ * DELETING OBJECTS                     *
+ * ------------------------------------ */
+
+    /**
+     * Deletes a recipe by a given ID
+     * @param {string} recipe_id The recipe ID of the recipe you want to delete
+     * @returns {void} Nothing
+     */
+    async deleteRecipe(recipe_id: string): Promise&lt;void&gt; {
+        return this.recipes.delete(recipe_id);
+    }
+
+    /**
+     * Deletes a beer by a given ID
+     * @param {string} beer_id The beer ID of the beer you want to delete
+     * @returns {void} Nothing
+     */
+    async deleteBeer(beer_id: string): Promise&lt;void&gt; {
+        return this.beers.delete(beer_id);
+    }
+
+    /**
+     * Deletes a favorited recipe by a given ID
+     * @param {string} fav_id The favorite ID of the recipe you want to delete
+     * @returns {void} Nothing
+     */
+    async deleteFavorites(fav_id: string): Promise&lt;void&gt; {
+        return this.favorites.delete(fav_id);
+    }
+
+/* -------------------------------------*
+ * DELETING ALL OBJECTS                 *
+ * ------------------------------------ */
+
+    /**
+     * Deletes all recipes
+     * @returns void
+     */
+    async deleteAllRecipes() {
+		return this.getAllRecipe().then(data &#x3D;&gt; {
+			for (let recipe of data) {
+				this.recipes.delete(recipe.id);
+			}
+		})
+	}
+
+    /**
+     * Deletes all beer
+     * @returns void
+     */
+    async deleteAllBeer() {
+        return this.getAllBeer().then(data &#x3D;&gt; {
+            for (let beer of data) {
+                this.beers.delete(beer.id);
+            }
+        })
+    }
+
+    /**
+     * Deletes all favorites
+     * @returns void
+     */
+    async deleteAllFavorites() {
+        return this.getAllFavorites().then(data &#x3D;&gt; {
+            for (let fav of data) {
+                this.favorites.delete(fav.id);
+            }
+        })
+    }
+
+/* -------------------------------------*
+ * FILTERING OBJECTS                    *
+ * ------------------------------------ */
+
+    /**
+     * Gets all recipes that somewhat equal the given title
+     * @param {string} recipe_title The title you want to filter for
+     * @returns {Promise} A Promise containing an Array of Recipes
+     */
+    async getRecipeByTitle(recipe_title: string): Promise&lt;Recipe[]&gt; {
+        return this.recipes
+            .where(&#x27;title&#x27;)
+            .equals(recipe_title)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+    /**
+     * Gets all Beer that somewaht equal the given title
+     * @param {string} beer_title The title you want to filter for
+     * @returns {Promise} A Promise containing an Array of Beer
+     */
+    async getBeerByTitle(beer_title: string): Promise&lt;Beer[]&gt; {
+        return this.beers
+            .where(&#x27;name&#x27;)
+            .equals(beer_title)
+            .sortBy(&#x27;name&#x27;);
+    }
+
+    /**
+     * Gets all favorited Recipes that somewhat equal the given title
+     * @param {string} fav_title The title you want to filter for
+     * @returns {Promise} A Promise containing an Array of Recipes
+     */
+    async getFavoriteByTitle(fav_title: string): Promise&lt;Recipe[]&gt; {
+        return this.favorites
+            .where(&#x27;title&#x27;)
+            .equals(fav_title)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+    /**
+     * Gets all Recipes that containe given ingredients
+     * @param {string[]} ingredients List of ingredients you want to filter for
+     * @returns {Promise} A Promise containing an Array of Recipes
+     */
+    async getRecipeByIngredients(ingredients: string[]): Promise&lt;Recipe[]&gt; {
+        return this.recipes
+            .where(&#x27;ingredients&#x27;)
+            .equals(ingredients)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+    /**
+     * Gets all Beer that contains given ingredients
+     * @param {string[]} ingredients List of ingredients you want to filter for
+     * @returns {Promise} A Promise containing an Array of Beer
+     */
+    async getBeerByIngredients(ingredients: string[]): Promise&lt;Beer[]&gt; {
+        return this.beers
+            .where(&#x27;ingredients&#x27;)
+            .equals(ingredients)
+            .sortBy(&#x27;name&#x27;);
+    }
+
+    /**
+     * Gets all favorite Recipes that contain given ingredients
+     * @param {string[]} ingredients List of ingredients you want to filter for
+     * @returns {Promise} A Promise containing an Array of Recipes
+     */
+    async getFavoriteByIngredients(ingredients: string[]): Promise&lt;Recipe[]&gt; {
+        return this.favorites
+            .where(&#x27;ingredients&#x27;)
+            .equals(ingredients)
+            .sortBy(&#x27;title&#x27;);
+    }
+
+/* -------------------------------------*
+ * IMPORT &amp; EXPORT                      *
+ * ------------------------------------ */
+
+    /**
+     * Exports the database by creating a json file and using the FileSaver library
+     */
+    async exportDatabase() {
+        const recipes &#x3D; await this.recipes.toArray();
+        const data &#x3D; JSON.stringify({ recipes });
+
+        const blob &#x3D; new Blob([data], { type: &#x27;text/plain;charset&#x3D;utf-8&#x27; });
+        saveAs(blob, &#x27;database.json&#x27;);
+        // &lt;button (click)&#x3D;&quot;exportDatabase()&quot;&gt;Export&lt;/button&gt;
+    }
+
+    /**
+     * Imports the database from a given JSON file
+     * @param {File} file A JSON containing all the data of the Database
+     */
+    async importDatabase(file: File) {
+        const reader &#x3D; new FileReader();
+        reader.readAsText(file);
+		console.log(&quot;inn&quot;);
+        reader.onload &#x3D; async () &#x3D;&gt; {
+            const { recipes } &#x3D; JSON.parse(reader.result as string);
+			console.log(recipes);
+            await this.transaction(&#x27;rw&#x27;, this.recipes, async () &#x3D;&gt; {
+                await this.recipes.bulkAdd(recipes);
+            });
+        };
+    }
+
+
+
+}
+/** Exports the Database as a constant variable */
+export const db &#x3D; new DbService();
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'DbService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,822 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>cook-jar documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">cook-jar documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >BeerAPI</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/BeerAPI.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This class is a Helper that retrives data from the Beer API and returns Beer Objects</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getAllBeer" >getAllBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getBeer" >getBeer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getBeerByFood" >getBeerByFood</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getBeerByName" >getBeerByName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getBeerByYeast" >getBeerByYeast</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getRandomBeer" >getRandomBeer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/shared/services/BeerAPI.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructors injects the necessary HttpClient</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Injected HttpClient for API requests</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getAllBeer</b></span>
+                        <a href="#getAllBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAllBeer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/shared/services/BeerAPI.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Will iterate through each page the API returns and build an array of Beer objects</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Observable&lt;Beer[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Beer object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getBeer</b></span>
+                        <a href="#getBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeer(beer_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app/shared/services/BeerAPI.ts:29</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches for a Beer by a given ID</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The ID of the beer you want to find</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Observable&lt;Beer&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Beer object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeerByFood"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getBeerByFood</b></span>
+                        <a href="#getBeerByFood"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeerByFood(food_name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/shared/services/BeerAPI.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Each beer can be combined to a different food product, and this function allows you to search for
+a beer that has one of these food products</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>food_name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The food you want to search a match for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Observable&lt;Beer&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Beer object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeerByName"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getBeerByName</b></span>
+                        <a href="#getBeerByName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeerByName(beer_name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/shared/services/BeerAPI.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches a beer by its name</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>beer_name</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The name of the beer</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Observable&lt;Beer&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Beer object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBeerByYeast"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getBeerByYeast</b></span>
+                        <a href="#getBeerByYeast"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getBeerByYeast(yeast: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/shared/services/BeerAPI.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches a beer by its yeast</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>yeast</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Yeast to search for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Observable&lt;Beer&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Beer object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRandomBeer"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>getRandomBeer</b></span>
+                        <a href="#getRandomBeer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getRandomBeer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/shared/services/BeerAPI.ts:38</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches for a random beer</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Beer.html" target="_self" >Observable&lt;Beer&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Beer object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &quot;@angular/common/http&quot;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { Beer } from &quot;../classes/Beer&quot;;
+import { v4 as uuidv4 } from &#x27;uuid&#x27;;
+
+/**
+ * This class is a Helper that retrives data from the Beer API and returns Beer Objects
+ */
+@Injectable({
+	providedIn: &quot;root&quot;
+})
+export class BeerAPI {
+    /** This URL is where all the API calls will go to */
+    private base_api_url &#x3D; &quot;https://api.punkapi.com/v2/beers&quot;;
+
+    /**
+     * The constructors injects the necessary HttpClient
+     * @param {HttpClient} http Injected HttpClient for API requests
+     */
+    constructor(private http: HttpClient) { }
+
+    /**
+     * Searches for a Beer by a given ID
+     * @param {string} beer_id The ID of the beer you want to find
+     * @returns {Observable} An Observable containing a Beer object
+     */
+    public getBeer(beer_id: string): Observable&lt;Beer&gt; {
+        return this.http.get&lt;Beer&gt;(&#x60;${this.base_api_url}/${beer_id}&#x60;)
+            .pipe(map(response &#x3D;&gt; this.create_beer(response)));
+    }
+
+    /**
+     * Searches for a random beer
+     * @returns {Observable} An Observable containing a Beer object
+     */
+    public getRandomBeer(): Observable&lt;Beer&gt; {
+        return this.http.get(&#x60;${this.base_api_url}/random&#x60;)
+            .pipe(map(response &#x3D;&gt; this.create_beer(response)));
+    }
+
+    /**
+     * Each beer can be combined to a different food product, and this function allows you to search for
+     * a beer that has one of these food products
+     * @param {string} food_name The food you want to search a match for
+     * @returns {Observable} An Observable containing a Beer object
+     */
+    public getBeerByFood(food_name: string): Observable&lt;Beer&gt; {
+        return this.http.get(&#x60;${this.base_api_url}?food&#x3D;${food_name}&#x60;)
+            .pipe(map(response &#x3D;&gt; this.create_beer(response)));
+    }
+
+    /**
+     * Searches a beer by its name
+     * @param {string} beer_name The name of the beer
+     * @returns {Observable} An Observable containing a Beer object
+     */
+    public getBeerByName(beer_name: string): Observable&lt;Beer&gt; {
+        return this.http.get(&#x60;${this.base_api_url}?beer_name&#x3D;${beer_name}&#x60;)
+            .pipe(map(response &#x3D;&gt; this.create_beer(response)));
+    }
+
+    /**
+     * Searches a beer by its yeast
+     * @param {string} yeast Yeast to search for
+     * @returns {Observable} An Observable containing a Beer object
+     */
+    public getBeerByYeast(yeast: string): Observable&lt;Beer&gt; {
+        return this.http.get(&#x60;${this.base_api_url}?yeast&#x3D;${yeast}&#x60;)
+            .pipe(map(response &#x3D;&gt; this.create_beer(response)));
+    }
+
+    /**
+     * Will iterate through each page the API returns and build an array of Beer objects
+     * @returns {Observable} An Observable containing a Beer object
+     */
+    public getAllBeer(): Observable&lt;Beer[]&gt; {
+        let beer_array: Beer[] &#x3D; [];
+
+        return new Observable(observer &#x3D;&gt; {
+            const fetchNextPage &#x3D; (page_nr: number) &#x3D;&gt; {
+                console.log(&quot;Fetching beer page: &quot;, page_nr);
+                this.http.get(&#x60;${this.base_api_url}?page&#x3D;${page_nr}&#x60;)
+                    .subscribe((response: any) &#x3D;&gt; {
+                        if (response.length &#x3D;&#x3D;&#x3D; 0) {
+                            observer.next(beer_array);
+                            observer.complete();
+                            return;
+                        } else {
+                            for (let beer of response) {
+                                beer_array.push(this.create_beer(beer));
+                            }
+                            fetchNextPage(page_nr + 1);
+                        }
+                    });
+            };
+
+            fetchNextPage(1);
+        });
+    }
+
+    /**
+     * @internal
+     * A private method that creates a Beer object from a given JSON string
+     * @param dirty_json The JSON string
+     * @returns {Beer} The converted Beer object
+     */
+    private create_beer(dirty_json: any): Beer {
+        const beer &#x3D; new Beer();
+        let is_malformed &#x3D; false;
+
+        if (Array.isArray(dirty_json)) {
+            console.log(&quot;Warning, JSON is Array&quot;);
+            dirty_json &#x3D; dirty_json[0];
+        }
+
+        try {
+            beer.id &#x3D; dirty_json?.id ?? uuidv4();
+            beer.name &#x3D; dirty_json?.name;
+            beer.tagline &#x3D; dirty_json?.tagline;
+            beer.brew_year &#x3D; dirty_json?.first_brewed;
+            beer.description &#x3D; dirty_json?.description;
+            beer.image_url &#x3D; dirty_json?.image_url;
+            beer.yeast &#x3D; dirty_json?.ingredients?.yeast;
+
+            let ingredients_arr &#x3D; dirty_json?.ingredients?.malt ?? [];
+             for (let iter &#x3D; 0; iter &lt;&#x3D; ingredients_arr.length-1; iter++) {
+                 let name &#x3D; ingredients_arr[iter]?.name;
+                 let amount &#x3D; ingredients_arr[iter]?.amount?.value + &quot; &quot; + ingredients_arr[iter]?.amount?.unit;
+                 beer.ingredients[name] &#x3D; amount;
+             }
+
+            beer.food_pairing &#x3D; dirty_json?.food_pairing;
+            beer.brewing_tips &#x3D; dirty_json?.brewers_tips;
+            beer.contributor &#x3D; dirty_json?.contributed_by;
+
+        } catch(err) {
+            console.warn(&#x60;The beer with the ID &#x27;${beer.id}&#x27; is malformed&#x60;);
+            is_malformed &#x3D; true;
+        }
+
+        return is_malformed ? new Beer() : beer;
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'BeerAPI.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

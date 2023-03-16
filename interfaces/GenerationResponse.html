@@ -1,0 +1,463 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>cook-jar documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">cook-jar documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li
+  >
+  GenerationResponse</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/StabilityAPI.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This interface represents the generation response of the stability API</p>
+
+            </p>
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#artifacts" 
+>
+                                            artifacts
+                                        </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="artifacts"></a>
+                                        <span class="name "><b>artifacts</b>
+                                            <a href="#artifacts">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>artifacts:     <code>Array&lt;literal type&gt;</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>Array&lt;literal type&gt;</code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Array of attributes</p>
+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { environment } from &#x27;../../../environments/environment&#x27;;
+import { Recipe } from &quot;../classes/Recipe&quot;;
+
+/**
+ * This interface represents the generation response of the stability API
+ */
+export interface GenerationResponse {
+    /** Array of attributes */
+    artifacts: Array&lt;{
+        base64: string;
+        seed: number;
+        finishReason: string;
+    }&gt;
+}
+
+/**
+ * This class is responsible for generating new and unique recipes
+ */
+@Injectable({
+    providedIn: &quot;root&quot;
+})
+export class StabilityAPI {
+
+    /**
+     * Returns the image of a given recipe
+     * @param prompt The propmt aka. title of the recipe
+     * @returns A promise containing the interface GenerationResponse
+     */
+    public async getImage(prompt: string): Promise&lt;GenerationResponse&gt; {
+        prompt +&#x3D; &quot; recipe&quot;
+
+        const engineId &#x3D; &#x27;stable-diffusion-512-v2-0&#x27;;
+        const apiHost &#x3D; &#x27;https://api.stability.ai&#x27;;
+        const apiKey &#x3D; environment.STABILITY_API_KEY;
+
+        const response &#x3D; await fetch(
+            &#x60;${apiHost}/v1beta/generation/${engineId}/text-to-image&#x60;,
+            {
+                method: &#x27;POST&#x27;,
+                headers: {
+                    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
+                    Accept: &#x27;application/json&#x27;,
+                    Authorization: &#x60;Bearer ${apiKey}&#x60;,
+                },
+                body: JSON.stringify({
+                    text_prompts: [
+                        {
+                            text: prompt
+                        }
+                    ],
+                    cfg_scale: 7,
+                    clip_guidance_preset: &#x27;FAST_BLUE&#x27;,
+                    height: 512,
+                    width: 1024,
+                    samples: 1,
+                    steps: 50,
+                })
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(&#x60;Non-200 response: ${await response.text()}&#x60;);
+        }
+
+        return await response.json() as GenerationResponse
+
+    }
+
+    /**
+     * Generates the text for a recipe from a given prompt or title
+     * @param req The prompt or title for a recipe
+     * @returns A Promise containing a response object
+     */
+    public generateRecipe(req: string) {
+
+        const apiKey &#x3D; environment.CS_API_KEY;
+        const options &#x3D; {
+            method: &#x27;POST&#x27;,
+            headers: {
+                accept: &#x27;application/json&#x27;,
+                &#x27;content-type&#x27;: &#x27;application/json&#x27;,
+                &#x27;X-API-KEY&#x27;: apiKey
+            },
+            body: JSON.stringify({
+                enable_google_results: &#x27;true&#x27;,
+                enable_memory: false,
+                input_text: &#x27;recipe with only ingrediens, instructions and cooking time in this format(hh:mm) as titles for &#x27; + req
+            })
+        };
+
+        return fetch(&#x27;https://api.writesonic.com/v2/business/content/chatsonic?engine&#x3D;premium&#x27;, options)
+    }
+
+    /**
+     * Parses a given string to a Recipe object
+     * @param dirty_text String you want to parse
+     * @returns An Recipe object
+     */
+    public parseRecipe(dirty_text: string): Recipe {
+        const recipe &#x3D; new Recipe();
+        let is_malformed &#x3D; false;
+
+        try {
+            // Remove all # from the string to have an uniform result
+            dirty_text &#x3D; dirty_text.split(&#x27;#&#x27;).join(&#x27;&#x27;);
+
+            // Extract the recipe title
+            const titleRegex &#x3D; /^(.+)\n/m;
+            const titleMatch &#x3D; dirty_text.match(titleRegex);
+            recipe.titles[&#x27;en&#x27;] &#x3D; titleMatch ? titleMatch[1]?.trim() : &#x27;Broken&#x27;;
+
+            // Extract the ingredients
+            const ingredientsRegex &#x3D; /Ingredients[\s\S]*?(?&#x3D;Instructions)/ms;
+            const ingredientsMatch &#x3D; dirty_text.match(ingredientsRegex);
+            recipe.ingredients[&#x27;en&#x27;] &#x3D; ingredientsMatch
+                ? ingredientsMatch[0]
+                    .split(&#x27;\n&#x27;)
+                    .filter((line) &#x3D;&gt; line.trim() !&#x3D;&#x3D; &#x27;&#x27;)
+                    .map((line) &#x3D;&gt; line.trim().replace(&#x27;- &#x27;, &#x27;&#x27;))
+                : [];
+            recipe.ingredients[&#x27;en&#x27;].shift();
+
+            // Extract the preparation text
+            const preparationRegex &#x3D; /Instructions[\s\S]*?(?&#x3D;Cooking)/m;
+            const preparationMatch &#x3D; dirty_text.match(preparationRegex);
+            recipe.preparation_text[&#x27;en&#x27;] &#x3D; preparationMatch
+                ? preparationMatch[0].replace(&#x27;Instructions\n&#x27;, &#x27;&#x27;)
+                : &#x27;&#x27;;
+
+            // Extract the preparation time
+            const timeRegex &#x3D; /Cooking Time[\s\S]*/m;
+            const timeMatch &#x3D; dirty_text.match(timeRegex);
+            recipe.preparation_time &#x3D; timeMatch ? timeMatch[0].replace(&#x27;Cooking Time\n&#x27;, &#x27;&#x27;).replace(&#x27;- &#x27;, &#x27;&#x27;) : &#x27;&#x27;;
+        } catch (err) {
+            console.error(&#x60;The generated recipe could not be parsed&#x60;, err);
+            is_malformed &#x3D; true;
+        }
+        return is_malformed ? new Recipe() : recipe;
+    }
+
+    // public imageRequest(prompt: string) {
+    // 	// Set up image parameters
+    // 	const imageParams &#x3D; new Generation.ImageParameters();
+    // 	imageParams.setWidth(512);
+    // 	imageParams.setHeight(512);
+    // 	imageParams.addSeed(1234);
+    // 	imageParams.setSamples(1);
+    // 	imageParams.setSteps(50);
+
+    // 	// Use the &#x60;k-dpmpp-2&#x60; sampler
+    // 	const transformType &#x3D; new Generation.TransformType();
+    // 	transformType.setDiffusion(Generation.DiffusionSampler.SAMPLER_K_DPMPP_2M);
+    // 	imageParams.setTransform(transformType);
+
+    // 	// Use Stable Diffusion 2.0
+    // 	const request &#x3D; new Generation.Request();
+    // 	request.setEngineId(&quot;stable-diffusion-512-v2-1&quot;);
+    // 	request.setRequestedType(Generation.ArtifactType.ARTIFACT_IMAGE);
+    // 	request.setClassifier(new Generation.ClassifierParameters());
+
+    // 	// Use a CFG scale of &#x60;13&#x60;
+    // 	const samplerParams &#x3D; new Generation.SamplerParameters();
+    // 	samplerParams.setCfgScale(13);
+
+    // 	const stepParams &#x3D; new Generation.StepParameter();
+    // 	const scheduleParameters &#x3D; new Generation.ScheduleParameters();
+
+    // 	// Set the schedule to &#x60;0&#x60;, this changes when doing an initial image generation
+    // 	stepParams.setScaledStep(0);
+    // 	stepParams.setSampler(samplerParams);
+    // 	stepParams.setSchedule(scheduleParameters);
+
+    // 	imageParams.addParameters(stepParams);
+    // 	request.setImage(imageParams);
+
+    // 	// Set our text prompt
+    // 	const promptText &#x3D; new Generation.Prompt();
+    // 	promptText.setText(prompt);
+
+    // 	request.addPrompt(promptText);
+
+    // 	// Authenticate using your API key, don&#x27;t commit your key to a public repository!
+    // 	const metadata &#x3D; new grpc.Metadata();
+    // 	metadata.set(&quot;Authorization&quot;, &quot;Bearer &quot; + &quot;sk-ADY2WuQIfzTHl3CYqu3REAtlFvxkRAWxyYw07pmUBQLOStxK&quot;);
+
+    // 	// Create a generation client
+    // 	const generationClient &#x3D; new GenerationService.GenerationServiceClient(
+    // 	&quot;https://grpc.stability.ai&quot;,
+    // 	{}
+    // 	);
+    // 	// Send the request using the &#x60;metadata&#x60; with our key from earlier
+    // 	const generation &#x3D; generationClient.generate(request, metadata);
+
+    // 	// Set up a callback to handle data being returned
+    // 	generation.on(&quot;data&quot;, (data) &#x3D;&gt; {
+    // 		data.getArtifactsList().forEach((artifact) &#x3D;&gt; {
+    // 			// Oh no! We were filtered by the NSFW classifier!
+    // 			if (
+    // 				artifact.getType() &#x3D;&#x3D;&#x3D; Generation.ArtifactType.ARTIFACT_TEXT &amp;&amp;
+    // 				artifact.getFinishReason() &#x3D;&#x3D;&#x3D; Generation.FinishReason.FILTER
+    // 			) {
+    // 			return console.error(&quot;Your image was filtered by the NSFW classifier.&quot;);
+    // 			}
+
+    // 			// Make sure we have an image
+    // 			if (artifact.getType() !&#x3D;&#x3D; Generation.ArtifactType.ARTIFACT_IMAGE) return;
+
+    // 			// You can convert the raw binary into a base64 string
+    // 			const base64Image &#x3D; btoa(
+    // 			new Uint8Array(artifact.getBinary_asU8()).reduce(
+    // 				(data, byte) &#x3D;&gt; data + String.fromCodePoint(byte),
+    // 				&quot;&quot;
+    // 			)
+    // 			);
+
+    // 			// Here&#x27;s how you get the seed back if you set it to &#x60;0&#x60; (random)
+    // 			const seed &#x3D; artifact.getSeed();
+
+    // 			// We&#x27;re done!
+    // 			someFunctionToCallWhenFinished({ seed, base64Image });
+    // 		});
+
+    // 		function someFunctionToCallWhenFinished({ seed, base64Image }: any) {
+    // 			const image &#x3D; document.createElement(&quot;img&quot;);
+    // 			image.src &#x3D; &#x60;data:image/png;base64,${base64Image}&#x60;;
+    // 			document.body.appendChild(image);
+    // 		  }
+    // 	});
+
+    // 	// Anything other than &#x60;status.code &#x3D;&#x3D;&#x3D; 0&#x60; is an error
+    // 	generation.on(&quot;status&quot;, (status) &#x3D;&gt; {
+    // 		if (status.code &#x3D;&#x3D;&#x3D; 0) return;
+    // 			console.error(
+    // 				&quot;Your image could not be generated. You might not have enough credits.&quot;
+    // 			);
+    // 	});
+    // }
+
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'GenerationResponse.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

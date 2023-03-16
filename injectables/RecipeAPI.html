@@ -1,0 +1,1013 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>cook-jar documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">cook-jar documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >RecipeAPI</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/RecipeAPI.ts</code>
+        </p>
+
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>This class is responsible for calling the OpendataHub API and convert its response
+to useful Recipe objects</p>
+
+            </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get_all_languages" >get_all_languages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get_all_recipes" >get_all_recipes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get_all_recipes_by_cooking" >get_all_recipes_by_cooking</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get_all_recipes_by_ingredients" >get_all_recipes_by_ingredients</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get_all_recipes_by_tag" >get_all_recipes_by_tag</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#get_recipe" >get_recipe</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/shared/services/RecipeAPI.ts:21</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructors injects the necessary HttpClient</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>Injected HttpClient for API requests</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_all_languages"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>get_all_languages</b></span>
+                        <a href="#get_all_languages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get_all_languages()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/shared/services/RecipeAPI.ts:33</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns all languages</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>string[]</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An array containing all supported languages</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_all_recipes"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>get_all_recipes</b></span>
+                        <a href="#get_all_recipes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get_all_recipes(lang: string[] | null)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/shared/services/RecipeAPI.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all recipes it can find and can optionally filter by a given language</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lang</td>
+                                    <td>
+                                            <code>string[] | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Optional language to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Observable&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Recipe object array</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_all_recipes_by_cooking"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>get_all_recipes_by_cooking</b></span>
+                        <a href="#get_all_recipes_by_cooking"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get_all_recipes_by_cooking(lang: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, cooking_type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/shared/services/RecipeAPI.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters all recipes by cooking type</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lang</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The language you selected</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>cooking_type</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The cooking type to filter for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Observable&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Recipe object array</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_all_recipes_by_ingredients"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>get_all_recipes_by_ingredients</b></span>
+                        <a href="#get_all_recipes_by_ingredients"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get_all_recipes_by_ingredients(lang: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, ingredients: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/shared/services/RecipeAPI.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters all recipes by a given array of ingredients</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lang</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The selected language</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ingredients</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The array of ingredients to search for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Observable&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Recipe object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_all_recipes_by_tag"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>get_all_recipes_by_tag</b></span>
+                        <a href="#get_all_recipes_by_tag"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get_all_recipes_by_tag(tags: string[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/shared/services/RecipeAPI.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Filters all recipes by array of tags</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tags</td>
+                                    <td>
+                                            <code>string[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>List of tags to search for</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Observable&lt;Recipe[]&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Recipe object array</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="get_recipe"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>get_recipe</b></span>
+                        <a href="#get_recipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>get_recipe(recipe_id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, lang: string | null)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="43"
+                            class="link-to-prism">src/app/shared/services/RecipeAPI.ts:43</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Searches a recipe by a specific ID and optionally specific language</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>recipe_id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>The ID of the recipe</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>lang</td>
+                                    <td>
+                                            <code>string | null</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                    <td>
+                                        <p>Language, by default is empty</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/Recipe.html" target="_self" >Observable&lt;Recipe&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>An Observable containing a Recipe object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { Injectable } from &quot;@angular/core&quot;;
+import { from, Observable } from &#x27;rxjs&#x27;;
+import { map, shareReplay } from &#x27;rxjs/operators&#x27;;
+import TurndownService from &#x27;turndown&#x27;;
+import { Recipe } from &quot;../classes/Recipe&quot;;
+
+/**
+ * This class is responsible for calling the OpendataHub API and convert its response
+ * to useful Recipe objects
+ */
+@Injectable({
+    providedIn: &quot;root&quot;
+})
+export class RecipeAPI {
+    /** This service is used in the parsing process to parse HTML to Markdown */
+    private turndownService &#x3D; new TurndownService();
+    /** This is an array of all supported languages of the OpendataHub API */
+    private possible_lang &#x3D; new Set([&#x27;en&#x27;, &#x27;de&#x27;, &#x27;it&#x27;, &#x27;nl&#x27;, &#x27;pl&#x27;, &#x27;fr&#x27;, &#x27;ru&#x27;, &#x27;sc&#x27;]);
+    /** This is the base URL to which all requests will go */
+    private base_api_url &#x3D; &quot;https://tourism.opendatahub.bz.it/v1/Article&quot;;
+
+    /**
+     * The constructors injects the necessary HttpClient
+     * @param {HttpClient} http Injected HttpClient for API requests
+     */
+    constructor(private http: HttpClient) { }
+
+    /**
+     * Returns all languages
+     * @returns {string[]} An array containing all supported languages
+     */
+    public get_all_languages(): string[] {
+        return Array.from(this.possible_lang);
+    }
+
+    /**
+     * Searches a recipe by a specific ID and optionally specific language
+     * @param {string} recipe_id The ID of the recipe
+     * @param {string | null} lang Language, by default is empty
+     * @returns {Observable} An Observable containing a Recipe object
+     */
+    public get_recipe(recipe_id: string, lang: string | null &#x3D; null): Observable&lt;Recipe&gt; {
+        if (lang &#x3D;&#x3D;&#x3D; null) {
+            return this.http.get(&#x60;${this.base_api_url}/${recipe_id}&#x60;)
+                .pipe(map(response &#x3D;&gt; this.create_recipe(response)));
+        } else if (this.isSubset(new Set(lang), this.possible_lang)) {
+            return this.http.get(&#x60;${this.base_api_url}/${recipe_id}?language&#x3D;${lang}&#x60;)
+                .pipe(map(response &#x3D;&gt; this.create_recipe(response)));
+        } else {
+            throw new Error(&#x60;The language value is wrong, possible values are: ${this.possible_lang}&#x60;);
+        }
+    }
+
+    /**
+     * Retrieves all recipes it can find and can optionally filter by a given language
+     * @param {string | null} lang Optional language to filter for
+     * @returns {Observable} An Observable containing a Recipe object array
+     */
+    public get_all_recipes(lang: string[] | null &#x3D; null): Observable&lt;Recipe[]&gt; {
+        if (lang &#x3D;&#x3D;&#x3D; null) {
+            return from(this.api_caller(&#x60;${this.base_api_url}?articletype&#x3D;32&#x60;)).pipe(map(recipes &#x3D;&gt; recipes));
+        } else if (this.isSubset(new Set(lang), this.possible_lang)) {
+            const language_params &#x3D; lang.join(&quot;%2C&quot;);
+            const api_url &#x3D; &#x60;${this.base_api_url}?articletype&#x3D;32&amp;langfilter&#x3D;${language_params}&#x60;;
+            return from(this.api_caller(api_url)).pipe(map(recipes &#x3D;&gt; recipes));
+        } else {
+            throw new Error(&#x60;The language value is wrong, possible values are: ${this.possible_lang}&#x60;);
+        }
+    }
+
+    /**
+     * Filters all recipes by array of tags
+     * @param {string[]} tags List of tags to search for
+     * @returns {Observable} An Observable containing a Recipe object array
+     */
+    public get_all_recipes_by_tag(tags: string[]): Observable&lt;Recipe[]&gt; {
+        const tag_params &#x3D; tags.join(&quot;%2C&quot;);
+        const api_url: string &#x3D; &#x60;${this.base_api_url}?articletype&#x3D;32&amp;odhtagfilter&#x3D;${tag_params}&#x60;;
+        return from(this.api_caller(api_url)).pipe(map(recipes &#x3D;&gt; recipes));
+    }
+
+    /**
+     * Filters all recipes by cooking type
+     * @param {string} lang The language you selected
+     * @param {string} cooking_type The cooking type to filter for
+     * @returns {Observable} An Observable containing a Recipe object array
+     */
+    public get_all_recipes_by_cooking(lang: string, cooking_type: string): Observable&lt;Recipe[]&gt; {
+        // rawfilter: and(isnotnull(AdditionalArticleInfos.de.Elements.zutat1), in(AdditionalArticleInfos.de.Elements.zutat1, &quot;olio&quot;))
+        const url_prefix &#x3D; &#x60;&amp;rawfilter&#x3D;and%28isnotnull%28AdditionalArticleInfos.${lang}.Elements.artkueche%29%2C%20in%28AdditionalArticleInfos.${lang}.Elements.artkueche%2C%20%22${cooking_type}%22%29%29&#x60;
+        return from(this.api_caller(&#x60;${this.base_api_url}?articletype&#x3D;32${url_prefix}&#x60;)).pipe(map(recipes &#x3D;&gt; recipes));
+    }
+
+    /**
+     * Filters all recipes by a given array of ingredients
+     * @param {string} lang The selected language
+     * @param {string[]} ingredients The array of ingredients to search for
+     * @returns {Observable} An Observable containing a Recipe object
+     */
+    public get_all_recipes_by_ingredients(lang: string, ingredients: string[]): Observable&lt;Recipe[]&gt; {
+        const api_url &#x3D; &#x60;${this.base_api_url}?articletype&#x3D;32&amp;langfilter&#x3D;${lang}&#x60;;
+		let array: Recipe[] &#x3D; [];
+        return from(this.api_caller(api_url).pipe(map(recipes &#x3D;&gt; {
+            for (const recipe of recipes) {
+				if (recipe.api_url !&#x3D;&#x3D; &quot;&quot;) {
+					if (this.countMatchingWords(recipe.ingredients[lang], ingredients) &gt;&#x3D; 1)
+						array.push(recipe);
+				}
+            }
+			return array;
+        })));
+    }
+
+    /**
+     * @internal
+     * This is a private function that does all the API calls and returns appropriate objects
+     * @param api_url URL to execute
+     * @returns Depends on API call
+     */
+    private api_caller(api_url: string): Observable&lt;Recipe[]&gt; {
+        // Caching with: https://blog.angulartraining.com/how-to-cache-the-result-of-an-http-request-with-angular-f9aebd33ab3
+        return new Observable(observer &#x3D;&gt; {
+            const rec_list: Recipe[] &#x3D; [];
+
+            this.http.get&lt;{ TotalPages: number; TotalResults: number; }&gt;(api_url)
+                .pipe(
+                    shareReplay(1),
+                    map(properties_req &#x3D;&gt; {
+                    const total_items &#x3D; properties_req.TotalResults;
+
+                    // Iterates through all pages
+                    this.http.get&lt;{ Items: any[] }&gt;(&#x60;${api_url}&amp;pagesize&#x3D;${total_items}&#x60;)
+                        .pipe(
+                            shareReplay(1),
+                            map(recipe_list &#x3D;&gt; {
+                            // Iterate through all recipes
+                            rec_list.push(...recipe_list.Items.map(this.create_recipe));
+
+                            observer.next(rec_list); // Returning an Observable
+                        }))
+                        .subscribe();
+                }))
+                .subscribe();
+        });
+    }
+
+    /**
+     * @internal
+     * A private function that transforms JSON objects to Recipe objects
+     * @param dirty_json The JSON object string
+     * @returns A Recipe object
+     */
+    private create_recipe &#x3D; (dirty_json: any): Recipe &#x3D;&gt; {
+        const recipe &#x3D; new Recipe();
+        let is_malformed &#x3D; false;
+        const regexForUrl &#x3D; /(?&lt;&#x3D;href&#x3D;[&quot;&#x27;]).*?(?&#x3D;[&quot;&#x27;])/g;;
+        recipe.id &#x3D; dirty_json?.Id;
+        recipe.api_url &#x3D; dirty_json?.Self;
+        recipe.languages &#x3D; dirty_json?.HasLanguage;
+        recipe.tags &#x3D; dirty_json?.SmgTags;
+        recipe.image_url &#x3D; dirty_json?.ImageGallery?.ImageUrl;
+		if (recipe?.languages)
+        for (const lang of recipe?.languages) {
+            try {
+                const json_detail &#x3D; dirty_json[&#x27;Detail&#x27;][lang] ?? &quot;&quot;;
+                recipe.titles[lang] &#x3D; json_detail[&#x27;Title&#x27;] ?? &quot;&quot;;
+                if (json_detail[&#x27;SubHeader&#x27;] !&#x3D; &quot;&quot;) {
+                    recipe.intro_text[lang] &#x3D; this.cleanText(json_detail[&#x27;SubHeader&#x27;]) ?? &quot;&quot;;
+                } else {
+                    recipe.intro_text[lang] &#x3D; this.cleanText(json_detail[&#x27;IntroText&#x27;]) ?? &quot;&quot;;
+                }
+                recipe.additional_text[lang] &#x3D; json_detail[&#x27;AdditionalText&#x27;].match(regexForUrl) ?? &quot;&quot;; // WARNING! Contains html
+                const json_infos &#x3D; dirty_json[&#x27;AdditionalArticleInfos&#x27;][lang][&#x27;Elements&#x27;] ?? &quot;&quot;;
+                recipe.preparation_time &#x3D; this.cleanText(json_infos[&#x27;zeit&#x27;]) ?? &quot;&quot;;
+                recipe.person_count &#x3D; json_infos[&#x27;personen&#x27;] ?? &quot;&quot;;
+                recipe.cooking_type[lang] &#x3D; json_infos[&#x27;artkueche&#x27;] ?? &quot;&quot;;
+                recipe.preparation_text[lang] &#x3D; this.cleanText(json_infos[&#x27;zubereitungstext&#x27;]) ?? &quot;&quot;;
+                recipe.ingredients[lang] &#x3D; this.create_ingredients(json_infos[&#x27;zutat1&#x27;] ?? &quot;&quot;); // In Markdown format
+            } catch (err) {
+                console.warn(&#x60;The recipe with the ID &#x27;${recipe.id}&#x27; is malformed&#x60;);
+                is_malformed &#x3D; true;
+            }
+        }
+        return is_malformed ? new Recipe() : recipe;
+    }
+
+    /**
+     * @internal
+     * Creates ingredients from a given JSON string
+     * @param dirty_html JSON object string
+     * @returns An array of string aka. ingredients
+     */
+    private create_ingredients(dirty_html: string | null): string[] {
+        if (!dirty_html) {
+            return [];
+        }
+        const markdown_ing &#x3D; this.turndownService.turndown(dirty_html);
+        // remove empty elements from the list, and remove the leading &#x27;- &#x27; from the ingredients
+        let ingredient_list &#x3D; markdown_ing.split(&quot;\n&quot;).filter(Boolean);
+        ingredient_list &#x3D; ingredient_list.map((ingredient: string) &#x3D;&gt; ingredient.startsWith(&quot;-&quot;) ? this.cleanText(ingredient.slice(2)) : this.cleanText(ingredient));
+
+        return ingredient_list;
+    }
+
+    /**
+     * @internal
+     * Checks if one set exists in another one
+     * @param subset First set
+     * @param set Second set
+     * @returns True if the set contain eachothers elements, else false
+     */
+    private isSubset(subset: Set&lt;string&gt;, set: Set&lt;string&gt;): boolean {
+        return Array.from(subset).every(element &#x3D;&gt; set.has(element));
+    }
+
+    /**
+     * @internal
+     * Removes special elements, HTML and other stuff from a given string
+     * @param dirty_text String you want to clean
+     * @returns A clean string
+     */
+    private cleanText(dirty_text: string): string {
+        // Extracted from: https://stackoverflow.com/a/1229594
+        if (dirty_text.startsWith(&quot;* &quot;)) {
+            dirty_text &#x3D; dirty_text.slice(2);
+        }
+        dirty_text.replace(/(&lt;([^&gt;]+)&gt;)/gi, &quot;&quot;);
+		dirty_text &#x3D; dirty_text.trim();
+        var div &#x3D; document.createElement(&quot;div&quot;);
+        div.innerHTML &#x3D; dirty_text;
+        return div.textContent || div.innerText;
+    }
+
+    private countMatchingWords(arr1: string[], arr2: string[]): number {
+        let count &#x3D; 0;
+        for (const str2 of arr2) {
+          for (const str1 of arr1) {
+            if (str2.indexOf(str1) !&#x3D;&#x3D; -1) {
+              count++;
+            }
+          }
+        }
+        return count;
+      }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'RecipeAPI.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

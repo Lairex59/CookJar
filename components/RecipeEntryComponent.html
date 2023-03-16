@@ -1,0 +1,1005 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>cook-jar documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">cook-jar documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  RecipeEntryComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/recipe-entry/recipe-entry.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>This component holds data from a single recipe in the list</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>cj-recipe-entry</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./recipe-entry.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./recipe-entry.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#buttonClicked" >buttonClicked</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#imageLoaded" >imageLoaded</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#imageText" >imageText</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ingredient" >ingredient</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#recipe" >recipe</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#generateImage" >generateImage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#generatePDF" >generatePDF</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#removeStarsInIngreidents" >removeStarsInIngreidents</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#lang" >lang</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, recipeApi: <a href="../injectables/RecipeAPI.html" target="_self">RecipeAPI</a>, image: <a href="../injectables/StabilityAPI.html" target="_self">StabilityAPI</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:28</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The constructor injects needed objects</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>for navigation</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>recipeApi</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/RecipeAPI.html" target="_self" >RecipeAPI</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>for data retrieval</p>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>image</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StabilityAPI.html" target="_self" >StabilityAPI</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <p>for image generation</p>
+
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateImage"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>generateImage</b></span>
+                        <a href="#generateImage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generateImage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="71"
+                            class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:71</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Generates the image of the recipe on demand</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generatePDF"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>generatePDF</b></span>
+                        <a href="#generatePDF"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>generatePDF()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="47"
+                            class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:47</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Ability to export the recipe in PDF format (is a bit ugly sorry)</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialises the component by retrieving the recipe data from the API</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeStarsInIngreidents"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>removeStarsInIngreidents</b></span>
+                        <a href="#removeStarsInIngreidents"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeStarsInIngreidents(ingredient: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Parses the ingredient text</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ingredient</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Single ingredient</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>a clean ingredient</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="buttonClicked"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>buttonClicked</b></span>
+                        <a href="#buttonClicked"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Saves the button state</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imageLoaded"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>imageLoaded</b></span>
+                        <a href="#imageLoaded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Check if image is loaded</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="imageText"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>imageText</b></span>
+                        <a href="#imageText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;data:image/png;base64, &quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The image in base64 format</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ingredient"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>ingredient</b></span>
+                        <a href="#ingredient"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&quot;&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A list of ingredients</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recipe"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>recipe</b></span>
+                        <a href="#recipe"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Recipe.html" target="_self" >Recipe</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The recipe whose data we use</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lang"></a>
+                        <span class="name"><b>lang</b><a href="#lang"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>lang()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/recipe-entry/recipe-entry.component.ts:85</a></div>
+                                </td>
+                            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Getter to retrieve language of given recipe</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute } from &quot;@angular/router&quot;;
+import html2canvas from &quot;html2canvas&quot;;
+import jsPDF from &quot;jspdf&quot;;
+import { Recipe } from &quot;../shared/classes/Recipe&quot;;
+import { RecipeAPI } from &#x27;../shared/services/RecipeAPI&#x27;;
+// import Speech from &#x27;speak-tts&#x27;;
+import { StabilityAPI } from &#x27;../shared/services/StabilityAPI&#x27;;
+
+/**
+ * This component holds data from a single recipe in the list
+ */
+@Component({
+  selector: &#x27;cj-recipe-entry&#x27;,
+  templateUrl: &#x27;./recipe-entry.component.html&#x27;,
+  styleUrls: [&#x27;./recipe-entry.component.scss&#x27;]
+})
+export class RecipeEntryComponent implements OnInit {
+    /** The recipe whose data we use */
+	public recipe!: Recipe;
+    /** The image in base64 format */
+	public imageText: string &#x3D; &quot;data:image/png;base64, &quot;;
+    /** Check if image is loaded */
+	public imageLoaded &#x3D; true;
+    /** Saves the button state */
+	public buttonClicked &#x3D; false;
+    /** A list of ingredients */
+	public ingredient: readonly any[] &#x3D; [&quot;&quot;];
+
+	// private speech &#x3D; new Speech(); // will throw an exception if not browser supported
+
+    /**
+     * The constructor injects needed objects
+     * @param route for navigation
+     * @param recipeApi for data retrieval
+     * @param image for image generation
+     */
+	constructor(
+		private route: ActivatedRoute,
+		private recipeApi: RecipeAPI,
+		private image: StabilityAPI
+	) { }
+
+    /**
+     * Ability to export the recipe in PDF format (is a bit ugly sorry)
+     */
+	public generatePDF() {
+		const data &#x3D; document.getElementById(&#x27;recipeContainer&#x27;);
+		html2canvas(data!).then((canvas: any) &#x3D;&gt; {
+			const imgWidth &#x3D; 208;
+			const imgHeight &#x3D; canvas.height * imgWidth / canvas.width;
+			const contentDataURL &#x3D; canvas.toDataURL(&#x27;image/png&#x27;);
+			let pdf &#x3D; new jsPDF(&#x27;p&#x27;, &#x27;mm&#x27;, &#x27;a4&#x27;);
+			pdf.addImage(contentDataURL, &#x27;PNG&#x27;, 0, 0, imgWidth, imgHeight);
+			pdf.save(&#x27;recipe.pdf&#x27;);
+		});
+	}
+
+    /**
+     * Initialises the component by retrieving the recipe data from the API
+     */
+	public ngOnInit(): void {
+		this.recipeApi.get_recipe(this.route?.snapshot?.params?.id).subscribe(recipe &#x3D;&gt; {
+			this.recipe &#x3D; recipe;
+		}, error &#x3D;&gt; alert(&quot;API couldn&#x27;t be reached&quot;));
+	}
+
+    /**
+     * Generates the image of the recipe on demand
+     */
+	public generateImage() {
+		// If you wnat to generate image: uncomment next 3 lines. currently commented out as to not too many api requests while testing other things
+		this.imageLoaded &#x3D; false;
+		this.buttonClicked &#x3D; true;
+		this.image.getImage(this.recipe.titles[this.route.snapshot.params.lang]).then(image &#x3D;&gt; {
+			this.imageText +&#x3D; image.artifacts[0].base64;
+			this.imageLoaded &#x3D; true;
+			this.buttonClicked &#x3D; false;
+		}, error &#x3D;&gt; alert(&quot;API couldn&#x27;t be reached&quot;));
+	}
+
+    /**
+     * Getter to retrieve language of given recipe
+     */
+	public get lang(): string {
+		return this.route.snapshot.params.lang
+	}
+
+    /**
+     * Parses the ingredient text
+     * @param ingredient Single ingredient
+     * @returns a clean ingredient
+     */
+	public removeStarsInIngreidents(ingredient: string) {
+		return ingredient.replace(/\*\*/g, &quot; &quot;);
+	}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;body&quot;&gt;
+	&lt;div *ngIf&#x3D;&quot;recipe&quot;&gt;
+		&lt;div style&#x3D;&quot;margin-bottom: 10px;&quot;&gt;
+			&lt;button mat-raised-button (click)&#x3D;&quot;generateImage()&quot; color&#x3D;&quot;primary&quot;&gt;Generate image&lt;/button&gt;
+			&lt;button mat-raised-button (click)&#x3D;&quot;generatePDF()&quot; color&#x3D;&quot;primary&quot; style&#x3D;&quot;margin-left: 10px;&quot;&gt;Save Recipe&lt;/button&gt;
+		&lt;/div&gt;
+		&lt;mat-card id&#x3D;&quot;recipeContainer&quot; *ngIf&#x3D;&quot;recipe.titles[lang]&quot; routerLink&#x3D;&quot;/recipeEntry/{{ recipe.id }}/{{ lang }}&quot;&gt;
+			&lt;mat-card-title&gt;{{ recipe.titles[lang] }}&lt;/mat-card-title&gt;
+			&lt;mat-card-subtitle&gt;{{ recipe.preparation_time }}&lt;/mat-card-subtitle&gt;
+			&lt;mat-card-subtitle *ngIf&#x3D;&quot;recipe.titles[lang] !&#x3D;&#x3D; recipe.intro_text[lang]&quot;&gt;{{ recipe.intro_text[lang] }}&lt;/mat-card-subtitle&gt;
+			&lt;mat-card-content&gt;
+				&lt;img [src]&#x3D;&quot;imageText&quot; class&#x3D;&quot;image&quot; *ngIf&#x3D;&quot;imageText !&#x3D;&#x3D; &#x27;data:image/png;base64, &#x27; &amp;&amp; imageLoaded &#x3D;&#x3D;&#x3D; true; else no&quot;&gt;
+				&lt;ng-template #no&gt;
+					&lt;mat-spinner *ngIf&#x3D;&quot;buttonClicked &#x3D;&#x3D;&#x3D; true&quot; style&#x3D;&quot;margin:0 auto;&quot; mode&#x3D;&quot;indeterminate&quot;&gt;&lt;/mat-spinner&gt;
+				&lt;/ng-template&gt;
+				&lt;div&gt;&lt;strong&gt;Ingredients: &lt;/strong&gt;&lt;/div&gt;
+				&lt;ul&gt;
+					&lt;div *ngFor&#x3D;&quot;let ingredient of recipe.ingredients[lang]&quot;&gt;
+						&lt;li *ngIf&#x3D;&quot;!ingredient.includes(&#x27;**&#x27;); else tag&quot;&gt;
+							&lt;span&gt;{{ ingredient }}&lt;/span&gt;
+						&lt;/li&gt;
+						&lt;ng-template #tag&gt;
+							&lt;h3&gt;{{ removeStarsInIngreidents(ingredient) }}&lt;/h3&gt;
+						&lt;/ng-template&gt;
+					&lt;/div&gt;
+				&lt;/ul&gt;
+				&lt;div *ngIf&#x3D;&quot;recipe.additional_text[lang]&quot;&gt;
+					&lt;a [href]&#x3D;&quot;recipe.additional_text[lang]&quot;&gt;&lt;strong&gt;Click here&lt;/strong&gt;&lt;/a&gt;
+					&lt;span&gt; to view preparation video&lt;/span&gt;
+					&lt;br&gt;
+				&lt;/div&gt;
+				&lt;br&gt;
+				&lt;span&gt;{{ recipe.preparation_text[lang] }}&lt;/span&gt;
+			&lt;/mat-card-content&gt;
+		&lt;/mat-card&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./recipe-entry.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">* {
+	color: darkgray
+}
+
+.body {
+	margin: 30px auto;
+	max-width: 900px;
+}
+
+mat-card {
+	background-color: #191c24;
+}
+
+.image {
+	max-width: 100%;
+	height: auto;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="body">	<div *ngIf="recipe">		<div style="margin-bottom: 10px;">			<button mat-raised-button (click)="generateImage()" color="primary">Generate image</button>			<button mat-raised-button (click)="generatePDF()" color="primary" style="margin-left: 10px;">Save Recipe</button>		</div>		<mat-card id="recipeContainer" *ngIf="recipe.titles[lang]" routerLink="/recipeEntry/{{ recipe.id }}/{{ lang }}">			<mat-card-title>{{ recipe.titles[lang] }}</mat-card-title>			<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>			<mat-card-subtitle *ngIf="recipe.titles[lang] !== recipe.intro_text[lang]">{{ recipe.intro_text[lang] }}</mat-card-subtitle>			<mat-card-content>				<img [src]="imageText" class="image" *ngIf="imageText !== \'data:image/png;base64, \' && imageLoaded === true; else no">				<ng-template #no>					<mat-spinner *ngIf="buttonClicked === true" style="margin:0 auto;" mode="indeterminate"></mat-spinner>				</ng-template>				<div><strong>Ingredients: </strong></div>				<ul>					<div *ngFor="let ingredient of recipe.ingredients[lang]">						<li *ngIf="!ingredient.includes(\'**\'); else tag">							<span>{{ ingredient }}</span>						</li>						<ng-template #tag>							<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>						</ng-template>					</div>				</ul>				<div *ngIf="recipe.additional_text[lang]">					<a [href]="recipe.additional_text[lang]"><strong>Click here</strong></a>					<span> to view preparation video</span>					<br>				</div>				<br>				<span>{{ recipe.preparation_text[lang] }}</span>			</mat-card-content>		</mat-card>	</div></div></div>'
+    var COMPONENTS = [{'name': 'AddEditRecipeComponent', 'selector': 'cj-add-edit-recipe'},{'name': 'AppComponent', 'selector': 'cj-root'},{'name': 'BarcodeEntryComponent', 'selector': 'cj-barcode-entry'},{'name': 'BeerEntryComponent', 'selector': 'cj-beer-entry'},{'name': 'BeerListComponent', 'selector': 'cj-beer-list'},{'name': 'CategoriesComponent', 'selector': 'cj-categories'},{'name': 'FavoritesComponent', 'selector': 'cj-favorites'},{'name': 'FridgeComponent', 'selector': 'cj-fridge'},{'name': 'HelpPageComponent', 'selector': 'cj-help-page'},{'name': 'HomeComponent', 'selector': 'cj-home'},{'name': 'ReceipeListComponent', 'selector': 'cj-receipe-list'},{'name': 'RecipeEntryComponent', 'selector': 'cj-recipe-entry'},{'name': 'YourRecipeListComponent', 'selector': 'cj-your-recipe-list'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'RecipeEntryComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RecipeEntryComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
