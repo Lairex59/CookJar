@@ -1,0 +1,19 @@
+<div style="margin-top: 15px;">
+	<mat-form-field fxFlex class="search">
+		<input #input matInput placeholder="Search" (keyup)="filterBeer(input.value)">
+	</mat-form-field>
+</div>
+<div class="loading" *ngIf="resourcesLoaded === false">
+	<div class="ring"></div>
+	<span class="text-loading">loading...</span>
+ </div>
+<div *ngIf="beerList.length">
+	<mat-card *ngFor="let beer of beerList" style="margin-bottom: 10px;" routerLink="/beerEntry/{{ beer.id }}">
+		<mat-card-title>{{ beer.name }}</mat-card-title>
+		<mat-card-subtitle>{{ beer.contributor }}</mat-card-subtitle>
+		<mat-card-subtitle>{{ beer.tagline }}</mat-card-subtitle>
+		<mat-card-content>
+			<span>{{ beer.description.substring(0, 135) }}...</span>
+		</mat-card-content>
+	</mat-card>
+</div>

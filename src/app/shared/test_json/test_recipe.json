@@ -1,0 +1,105 @@
+{
+    "Id": "0D569C76-570D-D4FE-0DAC-735137A511D0",
+    "Self": "https://tourism.opendatahub.bz.it/v1/Article/0D569C76-570D-D4FE-0DAC-735137A511D0",
+    "Detail": {
+        "it": {
+            "Title": "Insalata di cereali e verdure con speck, mele e salsa allo skyr",
+            "SubHeader": "Insalata di cereali e verdure con speck, mele e salsa allo skyr",
+            "AdditionalText": '<p><a href="https://youtu.be/azRyx4OR65o"><span style="text-decoration: underline;"><strong>Clicca qui</strong> </span></a>per il video come rifare la ricetta!</p>',
+        }
+    },
+    "SmgTags": ["vorspeise", "gemuese", "speck", "kraeutergewuerze", "aepfel"],
+    "HasLanguage": ["it"],
+    "AdditionalArticleInfos": {
+        "it": {
+            "Elements": {
+                "zeit": "00:30",
+                "zutat1": '<ul>\n<li>200 g di cereali misti</li>\n<li>100 g di asparagi</li>\n<li>100 g di carote</li>\n<li>100 g di zucchine</li>\n<li>100 g di peperoni rossi gialli</li>\n<li>1 Mela Alto Adige IGP da 250 g (variet&agrave; <a title="Granny Smith" href="https://www.melaaltoadige.com/it/mela-alto-adige-igp/varieta-di-mele/12-granny-smith.html" target="_blank" rel="noopener">Granny Smith</a>)</li>\n<li>olio evo q.b</li>\n<li>sale e pepe q.b</li>\n<li>1 spicchio d&rsquo;aglio</li>\n<li>1 rametto di rosmarino</li>\n<li>2 foglie di salvia</li>\n<li>1 foglia di alloro</li>\n<li>800 ml di brodo vegetale</li>\n<li>100 g <a title="Speck Alto Adige IGP&nbsp;" href="https://www.speck.it/it/" target="_blank" rel="noopener">Speck Alto Adige IGP&nbsp;</a></li>\n</ul>\n<p><strong>Per accompagnare</strong></p>\n<ul>\n<li>100 g di<a title="Skyr con Marchio Qualit&agrave; Alto Adige" href="https://www.altoadigelatte.com/latticini/skyr/" target="_blank" rel="noopener"> Skyr con Marchio Qualit&agrave; Alto Adige</a> (gusto naturale)</li>\n<li>erba aromatiche tritate</li>\n</ul>',
+                "personen": "4",
+                "artkueche": "Vegetarian",
+                "zubereitungstext": "<p>Mettere in un tegame l&rsquo;olio, l&rsquo;aglio, gli aromi, quindi lasciare rosolare per un minuto. Aggiungere il misto di legumi e cereali, far insaporire per un minuto mescolando e poi versare il brodo vegetale a coprire, regolando quindi di sale e di pepe. Lasciar cuocere fino a che il tutto non sar&agrave; pronto, ma ancora croccante e asciutto (circa 30-40 minuti). Tagliare una fetta di Speck dello spessore di 3 cm ed eliminare la cotenna dello Speck. Tagliarlo a fettine controfibra in modo che acquisisca la giusta consistenza, poi ridurlo a listarelle. Passarlo quindi in padella. Nel frattempo, tagliare le verdure in piccoli cubetti e saltarle in una pentola con un filo d&rsquo;olio. Mescolare le verdure con i cereali e legumi, unire la Mela tagliata a fettine sottili e impiattare, decorando con lo Skyr e le erbe aromatiche.</p>",
+            },
+        }
+    },
+}
+
+{
+    "id": "735B0D09-1CF5-E9D0-9E35-E9E34F64699B",
+    "api_url": "https://tourism.opendatahub.bz.it/v1/Article/735B0D09-1CF5-E9D0-9E35-E9E34F64699B",
+    "languages": ["de", "it"],
+    "tags": ["norbert-niederkofler"],
+    "titles": {"de": "Zunge und Preiselbeeren", "it": "Lingua e mirtilli rossi"},
+    "intro_text": {
+        "de": "Ein Rezept von Sternekoch Norbert Niederkofler",
+        "it": "Una ricetta del cuoco stellato Norbert Niederkofler",
+    },
+    "additional_text": {"de": null, "it": null},
+    "preparation_text": {
+        "de": "<p>KALBSZUNGE\n</p>\n<p>Die Zunge 48 Stunden in Rotwein, Gem\u00fcse und Aromen marinieren. Abgie\u00dfen und die Zunge mit\ndem Gem\u00fcse aus der Marinade in einen Topf geben. Mit Wasser bedecken. Anschlie\u00dfend 6\u20138\nStunden k\u00f6cheln, bis sie weich ist. Abgie\u00dfen und ausk\u00fchlen lassen. Anschlie\u00dfend die Haut abziehen\nund die Zunge in Portionen \u00e1 30 g schneiden.\n</p>\n<p>PREISELBEER-GEM\u00dcSESUD\n</p>\n<p>Das Gem\u00fcse in St\u00fccke schneiden und f\u00fcr 40\u201350 Minuten bei 220\u00b0C im Backofen braun r\u00f6sten. Das\nGem\u00fcse in einen Topf geben und unter R\u00fchren erhitzen. Mit dem Wei\u00dfwein abl\u00f6schen, dann mit\nWasser bedecken und 6 Stunden k\u00f6cheln lassen. Durch ein Sieb abgie\u00dfen. Den Gem\u00fcsesud\nreduzieren, bis der Zuckergehalt einen Wert von 50\u00b0 Brix erreicht.\n</p>\n<p>Die Zungenscheiben in einer Pfanne in etwas Traubenkern\u00f6l anbraten, auf Tellern anrichten und mit\ndem Preiselbeer-Gem\u00fcsesud glacieren. Die fermentierten Preiselbeeren zum Schluss daraufgeben.\n<ul>",
+        "it": "LINGUA DI VITELLO\n</p>\n<p>Marinare la lingua per 48 ore con il vino, le verdure e gli aromi. Scolare e porre la lingua insieme alle\nverdure in un pentolone, coprire con acqua e far bollire per 6-8 ore, finch\u00e9 la carne risulter\u00e0 morbida.\nQuindi scolarla e lasciare raffreddare. Rimuovere la pelle dalla lingua, quindi tagliarla in porzioni di\ncirca 30 g ciascuna.\n</p>\nFONDO VEGETALE\n</p>\n<p>Tagliare a pezzi la verdura, sistemarla su placche e tostarla nel forno preriscaldato a 200 \u00b0C per circa\n40-50 minuti fino a che assume un colore brunastro. Porre la verdura in un pentolone e deglassare le\nplacche con vino bianco di Terlano per risolvere l\u2019arrosto, che va aggiunto alle verdure. Coprire le\nverdure con acqua, salare e lasciare sobbollire per 6 ore. Filtrare per eliminare la verdura e mettere il\nfondo a ridurre ulteriormente finch\u00e9 il contenuto zuccherino sar\u00e0 pari a 50 \u00b0Bx.\n</p>\n<p>Rosolare la lingua con un filo di olio di semi di vinacciolo e glassarla con il fondo vegetale. Servire con\ni mirtilli rossi fermentati.\n<ul>",
+    },
+    "preparation_time": null,
+    "ingredients": {
+        "de": [
+            "KALBSZUNGE",
+            "1 Kalbszunge",
+            "1 l Rotwein",
+            "30 g Salz",
+            "1 Zwiebel",
+            "1 Karotte",
+            "1 Selleriestange",
+            "1 Lorbeerblatt",
+            "1 Salbeiblatt",
+            "1 Gew\u00fcrznelke",
+            "20 g Traubenkern\u00f6l",
+            "WEITERE ZUTATEN",
+            "150 g eingelegte Preiselbeeren (siehe Basisrezept Eingelegte Beeren)",
+            "PREISELBEER-GEM\u00dcSESUD",
+            "500 g Karotten",
+            "500 g Staudensellerie",
+            "500 g Pastinake",
+            "250 g Rote Bete",
+            "250 g Gelbe Bete",
+            "100 g Topinambur",
+            "100 g Selleriewurzel",
+            "25 g wilde Preiselbeeren",
+            "5 l Wasser",
+            "300 ml Terlan-Wei\u00dfwein",
+            "Salz",
+        ],
+        "it": [
+            "LINGUA DI VITELLO",
+            "1 lingua di vitello",
+            "30 g di sale",
+            "1 l di vino rosso",
+            "1 cipolla",
+            "1 carota",
+            "1 costa di sedano",
+            "1 foglia di alloro",
+            "1 foglia di salvia",
+            "1 chiodo di garofano",
+            "20 g di olio di semi di vinacciolo",
+            " ",
+            "FONDO VEGETALE",
+            "500 g di carote",
+            "500 g di sedano",
+            "500 g di pastinaca",
+            "250 g di rapa rossa",
+            "250 g di rapa gialla",
+            "100 g di topinambur",
+            "100 g di sedano rapa",
+            "25 g di mirtilli rossi selvatici",
+            "300 g di vino bianco di Terlano",
+            "5 l di acqua",
+            "sale",
+            " ",
+            "ALTRI INGREDIENTI",
+            "150 g di mirtilli rossi fermentati (vedi ricetta base per la fermentazione lattica)",
+        ],
+    },
+    "person_count": "4",
+    "cooking_type": {"de": null, "it": null},
+}
+
+
+

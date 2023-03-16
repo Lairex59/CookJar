@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js",
+          "/service-worker.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+	{
+		"name": "recipes",
+		"urls": [
+			"https://tourism.opendatahub.bz.it/v1/Article",
+			"https://api.punkapi.com/v2/beers",
+			"https://world.openfoodfacts.org/api/v3/product",
+			"https://api.writesonic.com/v2/business/content/chatsonic?engine=premium",
+			"https://api.stability.ai/v1beta/generation/stable-diffusion-512-v2-0/text-to-image"
+		],
+		"cacheConfig": {
+			"maxSize": 500,
+			"maxAge": "6h",
+			"timeout": "10s",
+			"strategy": "freshness"
+		}
+	}
+  ]
+}

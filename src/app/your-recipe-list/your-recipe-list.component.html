@@ -1,0 +1,69 @@
+<div class="body" style="margin-top: 20px;" fxLayout="column">
+	<h3>Recipe name:</h3>
+	<mat-form-field fxFlex>
+		<input matInput #search fxFlex="100%">
+	</mat-form-field>
+	<br>
+	<button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="generateAI(search.value)">AI generated recipe</button>
+	<h3>Search:</h3>
+	<mat-form-field fxFlex>
+		<input matInput #input fxFlex="100%" (keyup)="filterRecipe(input.value, 'en')">
+	</mat-form-field>
+	<h4 *ngIf="recipeList && resourcesLoaded === true">{{ recipeList.length }} recipe<span *ngIf="recipeList.length > 1">s</span> found</h4>
+	<br>
+	<mat-spinner *ngIf="buttonClicked === true && aiLoaded === false" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+	<div class="loading" *ngIf="resourcesLoaded === false">
+		<div class="ring"></div>
+		<span class="text-loading">loading...</span>
+	</div>
+	<div *ngIf="recipeList && resourcesLoaded === true">
+		<div *ngIf="recipeList.length; else empty">
+			<div *ngFor="let recipe of recipeList" style="margin-bottom: 10px;">
+				<mat-card *ngIf="recipe.titles['en'] || recipe?.titles">
+					<mat-card-title *ngIf="recipe?.titles?.['en']">{{ recipe.titles['en'] }}
+						<span>
+							<button mat-icon-button (click)="remove(recipe)"><mat-icon>delete</mat-icon></button>
+							<button mat-icon-button routerLink="./addEditRecipe/{{recipe.id}}"><mat-icon>edit</mat-icon></button>
+						</span>
+					</mat-card-title>
+					<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>
+					<mat-card-subtitle *ngIf="recipe.titles['en'] !== recipe.intro_text['en'] && recipe.titles['en']">{{ recipe.intro_text['en'] }}</mat-card-subtitle>
+					<mat-card-content>
+						<div *ngIf="recipe.image !== '' && imageLoaded === true; else no">
+							<img *ngIf="recipe.image" [src]="recipe.image" class="image" style="margin-bottom: 10px;">
+						</div>
+						<ng-template #no>
+							<mat-spinner *ngIf="buttonClicked === true && recipe_id === recipe.id" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+						</ng-template>
+						<div><strong>Ingredients: </strong></div>
+						<ul>
+							<div *ngFor="let ingredient of recipe.ingredients['en']">
+								<li>{{ ingredient.ingredient ?? ingredient }}</li>
+							</div>
+						</ul>
+						<div *ngIf="recipe.additional_text['en']">
+							<a [href]="recipe.additional_text['en']"><strong>Click here</strong></a>
+							<span> to view preparation video</span>
+							<br>
+						</div>
+						<br>
+						<span *ngIf="recipe.preparation_text?.['en']">{{ recipe.preparation_text['en'] }}</span>
+					</mat-card-content>
+					<mat-card-actions>
+						<div>
+							<button mat-icon-button color="primary" style="margin: 0px 40px 10px;" (click)="generateImage(recipe)"><img src="../../assets/custom-icons/image.svg"></button>
+							<button mat-icon-button color="primary" (click)="generateVideo(recipe)"><img src="../../assets/custom-icons/youtube.svg"></button>
+						</div>
+					</mat-card-actions>
+				</mat-card>
+			</div>
+		</div>
+		<ng-template #empty>
+			<span>You currently have no recipes...</span>
+		</ng-template>
+	</div>
+	<div style="margin-top: 10px;">
+		<button mat-fab color="primary" style="position: fixed; bottom: 20px; right: 30px; transform: scale(1.2)" routerLink="./addEditRecipe"><mat-icon>add</mat-icon></button>
+		<button mat-fab color="primary" style="position: fixed; bottom: 20px; right: 120px; transform: scale(1.2)" (click)="removeAll()"><mat-icon>delete</mat-icon></button>
+	</div>
+</div>

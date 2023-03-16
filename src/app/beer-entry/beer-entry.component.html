@@ -1,0 +1,25 @@
+<div class="body">
+	<div *ngIf="beer">
+		<mat-card>
+			<mat-card-title>{{ beer.name }}</mat-card-title>
+			<mat-card-subtitle>{{ beer.contributor }}</mat-card-subtitle>
+			<mat-card-subtitle>{{ beer.tagline }}</mat-card-subtitle>
+			<mat-card-subtitle>{{ beer.brew_year }}</mat-card-subtitle>
+			<mat-card-content>
+				<img src="{{beer.image_url}}" class="image" style="background-color: white;"/>
+				<br>
+				<ul>
+					 <div *ngFor="let key of beer.ingredients | keyvalue">
+						<li>
+							<span>{{ key.key }}: {{ key.value }}</span>
+						</li>
+					</div>
+				</ul>
+			</mat-card-content>
+			<div>{{ beer.yeast }}</div>
+			<div>{{ beer.description }}</div>
+			<div>{{ beer.brewing_tips }}</div>
+			<div>{{ beer.contributor }}</div>
+		</mat-card>
+	</div>
+</div>

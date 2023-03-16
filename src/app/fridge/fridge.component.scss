@@ -1,0 +1,18 @@
+:host {
+	display: block;
+	margin: 30px auto;
+	max-width: 900px;
+}
+
+mat-card {
+	background-color: #191c24;
+}
+
+* {
+	color: darkgray
+}
+
+.card:hover {
+	background-color: #2161f2;
+	cursor: pointer;
+}

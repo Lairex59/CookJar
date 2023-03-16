@@ -1,0 +1,48 @@
+<div class="body" style="margin-top: 20px;" fxLayout="column">
+	<h3>Search:</h3>
+	<mat-form-field fxFlex>
+		<input matInput #input fxFlex="100%" (keyup)="filterRecipe(input.value, 'en')">
+	</mat-form-field>
+	<div *ngIf="favorites">
+		<div *ngIf="favorites.length !== 0; else empty">
+			<div *ngFor="let recipe of favorites" style="margin-bottom: 10px;">
+				<mat-card *ngIf="recipe.titles['en'] || recipe?.titles">
+					<mat-card-title *ngIf="recipe?.titles?.['en']">
+						<span>{{ recipe.titles['en'] }}</span>
+						<span fxLayout>
+							<span><button mat-icon-button (click)="removeFavorite($event, recipe)"><mat-icon>favorite</mat-icon></button></span>
+						</span>
+					</mat-card-title>
+					<button mat-raised-button (click)="generateImage(recipe)" color="primary" style="margin-bottom: 10px;">Generate image</button>
+					<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>
+					<mat-card-subtitle *ngIf="recipe.titles['en'] !== recipe.intro_text['en'] && recipe.titles['en']">{{ recipe.intro_text['en'] }}</mat-card-subtitle>
+					<mat-card-content>
+						<div *ngIf="recipe.image_url !== '' && imageLoaded === true; else no">
+							<img *ngIf="recipe.image_url" [src]="recipe.image_url" class="image">
+						</div>
+						<ng-template #no>
+							<mat-spinner *ngIf="buttonClicked === true && id === recipe.id" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+						</ng-template>
+						<div><strong>Ingredients: </strong></div>
+						<ul>
+							<div *ngFor="let ingredient of recipe.ingredients['en']">
+								<li>{{ ingredient.ingredient ?? ingredient }}</li>
+							</div>
+						</ul>
+						<div *ngIf="recipe.additional_text['en']">
+							<a [href]="recipe.additional_text['en']"><strong>Click here</strong></a>
+							<span> to view preparation video</span>
+							<br>
+						</div>
+						<br>
+						<span *ngIf="recipe.preparation_text?.['en']">{{ recipe.preparation_text['en'] }}</span>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+		<ng-template #empty>
+			<span>You currently have favoritesss :c</span>
+		</ng-template>
+		<button mat-fab color="primary" style="position: fixed; bottom: 40px; right: 50px; transform: scale(1.2)" (click)="removeAll()"><mat-icon>remove</mat-icon></button>
+	</div>
+</div>

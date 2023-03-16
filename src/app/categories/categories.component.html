@@ -1,0 +1,19 @@
+<div class="body">
+	<div class="loading" *ngIf="resourcesLoaded === false">
+		<div class="ring"></div>
+		<span class="text-loading">loading...</span>
+	</div>
+	<mat-grid-list [cols]="cols" rowHeight="170px" [gutterSize]="gutterSize + 'px'" [ngStyle]="{ 'margin': (gutterSize / 2) + 'px' }">
+		<mat-grid-tile *ngFor="let category of categories">
+			<mat-card style="height: 130px;" (click)="navigate(category)" style="vertical-align: middle;">
+				<div class="center" [ngSwitch]="category">
+					<div>{{ category }}</div>
+					<img *ngSwitchCase="'Beer'" src="../../assets/custom-icons/beer-mug.svg">
+					<img *ngSwitchCase="'Vegetarian'" src="../../assets/custom-icons/avocado.svg">
+					<img *ngSwitchCase="'Vorspeise'" src="../../assets/custom-icons/vegetables.svg">
+					<img *ngSwitchCase="'Nachspeise'" src="../../assets/custom-icons/donut.svg">
+				</div>
+			</mat-card>
+		</mat-grid-tile>
+	</mat-grid-list>
+</div>

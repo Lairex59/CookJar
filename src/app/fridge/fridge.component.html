@@ -1,0 +1,76 @@
+<mat-card style="margin: 20px;">
+	<form fxLayout="column" [formGroup]="form"
+	 (ngSubmit)= "fridge()" autocomplete="off">
+		<mat-hint style="margin-bottom: 10px;">* This field is required in order to continue</mat-hint>
+		<div class="text"><strong>Ingredients*</strong></div>
+		<div fxFlex fxLayout="column" formArrayName="ingredientList">
+			<div fxFlex fxLayout="row" *ngFor="let control of ingredients.controls; index as i">
+				<div fxFlex fxLayout="row" [formGroupName]="i">
+					<mat-form-field fxFlex>
+						<input matInput formControlName="ingredient" type="text">
+						<mat-error>The ingredients text cannot be empty</mat-error>
+					</mat-form-field>
+				</div>
+				<button
+					mat-mini-fab
+					color="primary"
+					[disabled]="ingredients.value.length === 1 ? 'true' : 'false'"
+					type="button"
+					(click)="removeIngredientsControl(i)">
+					<mat-icon>remove</mat-icon>
+				</button>
+				<button
+					*ngIf="i == ingredients.controls.length - 1"
+					mat-mini-fab
+					color="primary"
+					type="button"
+					(click)="addIngredientsControl()"><mat-icon>add</mat-icon>
+				</button>
+			</div>
+		</div>
+		<br>
+		<button fxFlex mat-raised-button type="submit"
+		[disabled]="!form.valid" color="primary">Show recipes</button>
+	</form>
+</mat-card>
+<div *ngIf="recipeLoaded; else loading">
+<div *ngIf="recipes">
+	<div style="margin-top: 20px;">
+		<div *ngIf="recipes.length; else empty">
+			<h3>Found {{ recipes.length }} recipe<span *ngIf="recipes.length > 1 ">s</span></h3>
+				<div *ngFor="let recipe of recipes" style="margin-bottom: 10px;">
+					<mat-card *ngIf="recipe.titles['en']" routerLink="/recipeEntry/{{ recipe.id }}/{{ 'en' }}" class="card">
+						<mat-card-title>
+							<span class="title">{{ recipe.titles['en'] }}</span>
+							<span *ngIf="recipe.cooking_type['en'] === 'Vegetarian'">&nbsp;<mat-icon>spa</mat-icon></span>
+						</mat-card-title>
+						<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>
+						<mat-card-subtitle *ngIf="recipe.titles['en'] !== recipe.intro_text['en']">{{ recipe.intro_text['en'] }}</mat-card-subtitle>
+						<mat-card-content>
+							<ul>
+								<div *ngFor="let ingredient of recipe.ingredients['en']; index as i">
+									<div *ngIf="i <= 4">
+										<li *ngIf="!ingredient.includes('**'); else tag">
+											<span>{{ ingredient }}</span>
+										</li>
+										<ng-template #tag>
+											<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>
+										</ng-template>
+									</div>
+								</div>
+								<li *ngIf="recipe.ingredients['en'].length != 5">...</li>
+							</ul>
+							<span>{{ recipe.preparation_text['en'].substring(0, 135) }}...</span>
+						</mat-card-content>
+					</mat-card>
+				</div>
+			</div>
+		</div>
+		<ng-template #empty>
+			<h3>No recipes found</h3>
+		</ng-template>
+	</div>
+</div>
+<ng-template #loading>
+	<mat-spinner *ngIf="buttonClicked === true" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+</ng-template>

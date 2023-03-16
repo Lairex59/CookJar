@@ -1,0 +1,84 @@
+<mat-card style="margin: 20px;">
+	<form fxLayout="column" [formGroup]="form"
+	 (ngSubmit)= "addRecipe()" autocomplete="off">
+		<mat-hint>* This field is required in order to continue</mat-hint>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Title*</strong></div>
+			<input matInput formControlName="titles"
+			type="text">
+			<mat-error>The title cannot be empty</mat-error>
+			</mat-form-field>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Introduction text</strong></div>
+			<input matInput formControlName="intro_text"
+			type="text">
+		</mat-form-field>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Video link</strong></div>
+			<input matInput formControlName="video_link"
+			type="text">
+		</mat-form-field>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Tags</strong></div>
+			<input matInput formControlName="tags" type="text">
+		</mat-form-field>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Preparation text*</strong></div>
+			<input matInput formControlName="preparation_text" type="text">
+			<mat-error>The preparation text cannot be empty</mat-error>
+		</mat-form-field>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Preparation time*</strong></div>
+			<input matInput formControlName="preparation_time" type="text">
+			<mat-error>The preparation time cannot be empty</mat-error>
+		</mat-form-field>
+		<div class="text"><strong>Ingredients*</strong></div>
+		<div fxFlex fxLayout="column" formArrayName="ingredientList">
+			<div fxFlex fxLayout="row" *ngFor="let control of ingredients.controls; index as i">
+				<div fxFlex fxLayout="row" [formGroupName]="i">
+					<mat-form-field fxFlex>
+						<input matInput formControlName="ingredient" type="text">
+						<mat-error>The ingredients text cannot be empty</mat-error>
+					</mat-form-field>
+				</div>
+				<button
+					mat-mini-fab
+					color="primary"
+					[disabled]="ingredients.value.length === 1 ? 'true' : 'false'"
+					type="button"
+					(click)="removeIngredientsControl(i)">
+					<mat-icon>remove</mat-icon>
+				</button>
+				<button
+					*ngIf="i == ingredients.controls.length - 1"
+					mat-mini-fab
+					color="primary"
+					type="button"
+					(click)="addIngredientsControl()"><mat-icon>add</mat-icon>
+				</button>
+			</div>
+		</div>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Person count</strong></div>
+			<input matInput formControlName="person_count" type="number" min="0">
+		</mat-form-field>
+		<mat-form-field fxFlex>
+			<div class="text"><strong>Cooking type e.g. Vegetarian</strong></div>
+			<input matInput formControlName="cooking_type" type="text">
+		</mat-form-field>
+		<div fxFlex>
+			<div><strong>Image</strong></div>
+			<br>
+			<input #file type="file" (change)="handle(file.files)" accept="image/*">
+			<br>
+			<img [src]="imgURL" class="image" *ngIf="imgURL" style="margin: 10px 0px 5px;">
+			<br>
+			<button mat-raised-button color="primary" (click)="removeImage()" *ngIf="imgURL !== ''">Remove Image</button>
+		</div>
+		<br>
+		<button fxFlex mat-flat-button type="submit"
+		[disabled]="!form.valid" *ngIf="id" color="primary">Edit Recipe</button>
+		<button fxFlex mat-raised-button type="submit"
+		[disabled]="!form.valid" *ngIf="!id" color="primary">Add Recipe</button>
+	</form>
+</mat-card>

@@ -1,0 +1,63 @@
+<div class="body">
+	<mat-toolbar class="toolbar">
+		<button *ngIf="!router.url.startsWith('/yourRecipeList') && !router.url.startsWith('/barcode')" mat-icon-button (click)="drawer.toggle()" matTooltip="Menu">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<span *ngIf="router.url.startsWith('/yourRecipeList') || router.url.startsWith('/barcode')">
+			<button mat-icon-button (click)="goBack()"><mat-icon>chevron_left</mat-icon></button>
+		</span>
+		<div *ngIf="router.url == '/home'" class="title-center-home">
+			<span fxHide.lt-md fxFlex>{{greetingTextBig}}</span>
+			<span fxHide.gt-sm fxFlex>{{greetingTextSmall}}</span>
+		</div>
+		<span *ngIf="router.url.startsWith('/recipeList')" class="title-center" routerLink="/home">Open Data Hub</span>
+		<span *ngIf="router.url.startsWith('/categories')" class="title-center" routerLink="/home">Categories</span>
+		<span *ngIf="router.url ==='/yourRecipeList'" class="title-center" routerLink="/home">Your Recipe List</span>
+		<span *ngIf="router.url.startsWith('/yourRecipeList/addEditRecipe')" class="title-center" routerLink="/home">Add / Edit Recipe</span>
+		<span *ngIf="router.url.startsWith('/beer')" class="title-center" routerLink="/home">Beer List</span>
+		<span *ngIf="router.url.startsWith('/barcode')" class="title-center" routerLink="/home">Food Facts</span>
+		<span *ngIf="router.url.startsWith('/recipeEntry')" class="title-center" routerLink="/home">Recipe</span>
+		<span *ngIf="router.url.startsWith('/favorites')" class="title-center" routerLink="/home">Favorites</span>
+		<span *ngIf="router.url.startsWith('/help')" class="title-center" routerLink="/home">Help</span>
+		<span *ngIf="router.url.startsWith('/fridge')" class="title-center" routerLink="/home">Fridge</span>
+		<button mat-icon-button (click)="startBarecodeScannerOverlay()" matTooltip="Barcode scanner">
+			<div class="barcode-out">
+				<img src="../assets/custom-icons/barcode.svg">
+			</div>
+		</button>
+		<button *ngIf="router.url !== '/yourRecipeList' && router.url !== '/yourRecipeList/addEditRecipe'"
+			mat-icon-button matTooltip="Your recipe list" routerLink="/yourRecipeList">
+			<img src="../assets/custom-icons/your-recipe-list.svg">
+		</button>
+		<span *ngIf="router.url === '/yourRecipeList'">
+			<button mat-icon-button (click)="exportDatabase()" matTooltip="Export database"><mat-icon>upload</mat-icon></button>
+			<button mat-icon-button (click)="importDatabase()" matTooltip="Import database"><mat-icon>download</mat-icon>
+				<input type="file" style="display:none" (change)="handle($event)"  accept="application/JSON">
+			</button>
+		</span>
+		<barcode-scanner-livestream-overlay
+		  [type]="['ean', 'ean_8']"
+		  (valueChanges)="onValueChanges($event)"
+		></barcode-scanner-livestream-overlay>
+	</mat-toolbar>
+	<mat-sidenav-container class="container">
+		<mat-sidenav #drawer mode="over" class="sidenav" [mode]="mobileQuery.matches ? 'over' : 'side'"
+		[fixedInViewport]="mobileQuery.matches">
+			<mat-nav-list  [ngStyle.lt-md]="{ 'margin-top': '56px' }">
+				<a mat-list-item class="buttons" routerLink="/home" (click)="drawer.toggle()"><img src="../assets/custom-icons/home.svg"><p class="nav-caption">Home</p></a>
+				<a mat-list-item class="buttons" routerLink="/recipeList"  (click)="drawer.toggle()"><img src="../assets/custom-icons/recipe-list.svg"><p class="nav-caption">Recipe List</p></a>
+				<a mat-list-item class="buttons" routerLink="/categories" (click)="drawer.toggle()"><img src ="../assets/custom-icons/categories.svg"><p class="nav-caption">Categories</p></a>
+				<a mat-list-item class="buttons" routerLink="/favorites" (click)="drawer.toggle()"><img src="../assets/custom-icons/favorites.svg"><p class="nav-caption">Favorites</p></a>
+				<a mat-list-item class="buttons" routerLink="/fridge" (click)="drawer.toggle()"><img src="../assets/custom-icons/fridge.svg"><p class="nav-caption">Fridge ODH</p></a>
+				<a mat-list-item class="buttons" routerLink="/help" (click)="drawer.toggle()"><img src="../assets/custom-icons/help.svg"><p class="nav-caption">Help</p></a>
+			</mat-nav-list>
+		</mat-sidenav>
+		<mat-sidenav-content>
+			<router-outlet class="sidenav-content"></router-outlet>
+		</mat-sidenav-content>
+	<div class="footer">
+		<span>&#169;xx.com is the global source of information about and access to services provided by the xxx companies.</span>
+		<span class="pull-right copyright">&copy; 2019 xxxgroup Inc.</span>
+	  </div>
+	</mat-sidenav-container>
+</div>

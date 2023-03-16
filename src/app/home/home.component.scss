@@ -1,0 +1,28 @@
+.body {
+	margin-right: 15px;
+	margin-left: 15px;
+	max-width: fit-content;
+}
+
+* {
+	color: darkgray;
+}
+
+mat-card {
+	background-color: #191c24;
+}
+
+.image {
+	max-width: 100%;
+	height: auto;
+}
+.barcode-scanner-container,
+.barcode-value {
+  display: flex;
+  justify-content: center;
+}
+
+.favorites:hover {
+	background-color: #2161f2;
+	cursor: pointer;
+}

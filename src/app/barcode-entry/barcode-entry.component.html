@@ -1,0 +1,50 @@
+<mat-card *ngIf="fact && fact.product_name !== 'malformed'">
+	<mat-card-title>{{ fact.product_name }}, {{ fact.id }}</mat-card-title>
+	<mat-card-subtitle>
+		<br>
+		<span *ngIf="fact.brand_owner && fact.common_name"><strong>Brands:</strong> {{ fact.brand_owner }}, <strong>Name:</strong> {{ fact.common_name }}</span>
+		<span *ngIf="fact.brand_owner && !fact.common_name"><strong>Brands:</strong> {{ fact.brand_owner }}</span>
+		<span *ngIf="!fact.brand_owner && fact.common_name"><strong>Name:</strong> {{ fact.common_name }}</span>
+	</mat-card-subtitle>
+	<mat-card-content fxLayout="column">
+		<span *ngIf="fact.image_front_url">
+			<h3>Image front:</h3>
+			<img [src]="fact.image_front_url" class="image">
+		</span>
+		<div>
+			<h3>Facts:</h3>
+			<div *ngIf="fact.quantity"><strong>Quantity: </strong>{{ fact.quantity }}</div>
+			<div *ngIf="fact.ingredients_origin"><strong>Ingredients origin: </strong>{{ fact.ingredients_origin }}</div>
+			<div *ngIf="fact.categories"><strong>Categories: </strong>{{ fact.categories }}</div>
+			<div *ngIf="fact.sold_in_countries"><strong>Sold in countries: </strong>{{ fact.sold_in_countries }}</div>
+			<div *ngIf="fact.ingredients"><strong>Ingredients: </strong>{{ fact.ingredients }}</div>
+			<div *ngIf="fact.ingredient_analysis"><strong>Ingredient Analysis: </strong>{{ fact.ingredient_analysis }}</div>
+			<div *ngIf="fact.additives.length != 0"><strong>Additives: </strong><span *ngFor="let all of fact.additives">{{ all.toUpperCase() }}</span></div>
+			<div *ngIf="fact.allergens.length != 0"><strong>Allergens: </strong><span *ngFor="let all of fact.allergens">{{ all }}</span></div>
+			<div *ngIf="fact.energy_value"><strong>Energy value: </strong>{{ fact.energy_value }}</div>
+			<div *ngIf="fact.food_processing.length != 0"><strong>Food processing: </strong><span *ngFor="let all of fact.food_processing">{{ all }}</span></div>
+			<div *ngIf="fact.nutrition_quality"><strong>Nutrition quality: </strong>{{ fact.nutrition_quality.toUpperCase() }}</div>
+			<div *ngIf="fact.labels"><strong>Labels: </strong>{{ fact.labels }}</div>
+		</div>
+		<div *ngIf="fact.image_ingredients_url">
+			<h3>Image ingredients:</h3>
+			<img [src]="fact.image_ingredients_url" class="image">
+		</div>
+		<div *ngIf="fact.image_nutrition_url">
+			<h3>Image nutrition:</h3>
+			<img [src]="fact.image_nutrition_url" class="image">
+		</div>
+	</mat-card-content>
+</mat-card>
+<div *ngIf="err || fact.product_name === 'malformed'" fxLayout="column">
+	<h2>{{err}} ({{id}})</h2>
+	<div><strong>Disclaimer:</strong> It could be that our barcodes don't work perfectly with EAN13, due to some regulations. Sorry for the inconvenience.</div>
+	<div>You can also type the numbers below the barcode here:</div>
+	<div>Example:</div>
+	<img src="../../assets/images/codebar.png" class="image">
+	<br>
+	<mat-form-field fxFlex>
+		<input #number matInput type="number" max="9999999999999" placeholder="Barcode number">
+	</mat-form-field>
+	<button mat-raised-button color="primary" (click)="submit(number.value)">Submit</button>
+</div>

@@ -1,0 +1,110 @@
+<br>
+<div class="body">
+	<div class="daily">
+		<h2>Daily Recipe:</h2>
+		<br>
+		<div class="body">
+			<div *ngIf="recipe">
+				<div style="margin-bottom: 10px;">
+					<button mat-raised-button (click)="generateImage()" style="margin-right: 10px;" color="primary">Generate image</button>
+					<div fxHide.gt-sm style="margin-bottom: 10px;"></div>
+					<button mat-raised-button (click)="randomBeer()" color="primary">Show random beer</button>
+				</div>
+				<mat-card *ngIf="recipe.titles['en']">
+					<mat-card-title>{{ recipe.titles['en'] }}</mat-card-title>
+					<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>
+					<mat-card-subtitle *ngIf="recipe.titles['en'] !== recipe.intro_text['en']">{{ recipe.intro_text['en'] }}</mat-card-subtitle>
+					<mat-card-content>
+						<img [src]="imageText" class="image" *ngIf="imageText !== 'data:image/png;base64, ' && imageLoaded === true; else no">
+						<ng-template #no>
+							<mat-spinner *ngIf="buttonClicked === true" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+						</ng-template>
+						<ul>
+							<div *ngFor="let ingredient of recipe.ingredients['en']">
+								<li *ngIf="!ingredient.includes('**'); else tag">
+									<span>{{ ingredient }}</span>
+								</li>
+								<ng-template #tag>
+									<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>
+								</ng-template>
+							</div>
+						</ul>
+						<div *ngIf="recipe.additional_text['en']">
+							<a [href]="recipe.additional_text['en']"><strong>Click here</strong></a>
+							<span> to view preparation video</span>
+							<br>
+						</div>
+						<br>
+						<span>{{ recipe.preparation_text['en'] }}</span>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+
+	</div>
+	<br>
+	<div class="yourFavorites">
+		<h2>Your Favorites:</h2>
+		<br>
+		<div *ngIf="favorites.length === 0; else showFavorites">
+			<span>You currently have no favorite recipes :c. GO LIKE SOME RECIPES :).</span>
+		</div>
+		<ng-template #showFavorites>
+			<!-- For Loop with your favorite receieps in mat-card -->
+			<div style="display: flex; overflow: auto">
+				<div *ngFor="let favorite of favorites; let i = index">
+					<mat-card class="favorites" *ngIf="i !== 0; else first" style="flex: 1 1 auto; margin-left: 10px; max-width: 480px;" (click)="navigate(favorite, 'en')">
+						<mat-card-title>
+							<span class="title">{{ favorite.titles['en'] }}</span>
+							<span *ngIf="favorite.cooking_type['en'] === 'Vegetarian'">&nbsp;<mat-icon>spa</mat-icon></span>
+						</mat-card-title>
+						<mat-card-subtitle>{{ favorite.preparation_time }}</mat-card-subtitle>
+						<mat-card-subtitle *ngIf="favorite.titles['en'] !== favorite.intro_text['en']">{{ favorite.intro_text['en'] }}</mat-card-subtitle>
+						<mat-card-content>
+							<ul>
+								<div *ngFor="let ingredient of favorite.ingredients['en']; index as i">
+									<div *ngIf="i <= 4">
+										<li *ngIf="!ingredient.includes('**'); else tag">
+											<span>{{ ingredient }}</span>
+										</li>
+										<ng-template #tag>
+											<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>
+										</ng-template>
+									</div>
+								</div>
+								<li *ngIf="favorite.ingredients['en'].length != 5">...</li>
+							</ul>
+							<span>{{ favorite.preparation_text['en'].substring(0, 135) }}...</span>
+						</mat-card-content>
+					</mat-card>
+					<ng-template #first>
+						<mat-card class="favorites" style="max-width: 480px;" (click)="navigate(favorite, 'en')">
+							<mat-card-title>
+								<span class="title">{{ favorite.titles['en'] }}</span>
+								<span *ngIf="favorite.cooking_type['en'] === 'Vegetarian'">&nbsp;<mat-icon>spa</mat-icon></span>
+							</mat-card-title>
+							<mat-card-subtitle>{{ favorite.preparation_time }}</mat-card-subtitle>
+							<mat-card-subtitle *ngIf="favorite.titles['en'] !== favorite.intro_text['en']">{{ favorite.intro_text['en'] }}</mat-card-subtitle>
+							<mat-card-content>
+								<ul>
+									<div *ngFor="let ingredient of favorite.ingredients['en']; index as i">
+										<div *ngIf="i <= 4">
+											<li *ngIf="!ingredient.includes('**'); else tag">
+												<span>{{ ingredient }}</span>
+											</li>
+											<ng-template #tag>
+												<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>
+											</ng-template>
+										</div>
+									</div>
+									<li *ngIf="favorite.ingredients['en'].length != 5">...</li>
+								</ul>
+								<span>{{ favorite.preparation_text['en'].substring(0, 135) }}...</span>
+							</mat-card-content>
+						</mat-card>
+					</ng-template>
+				</div>
+			</div>
+		</ng-template>
+	</div>
+</div>

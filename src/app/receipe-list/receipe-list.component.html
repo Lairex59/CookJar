@@ -1,0 +1,59 @@
+<div class="body" style="margin-top: 15px;">
+	<mat-button-toggle-group #group="matButtonToggleGroup" value="en" class="buttonToggle">
+		<mat-button-toggle *ngFor="let lang of recipeApi.get_all_languages()" value="{{lang}}" aria-label="{{lang}}">
+			<mat-icon *ngIf="lang !== 'en'"><span class="fi fi-{{ lang }} specIcon">{{ lang }}</span></mat-icon>
+			<mat-icon *ngIf="lang === 'en'"><span class="fi fi-gb specIcon">{{ lang }}</span></mat-icon>
+		</mat-button-toggle>
+	</mat-button-toggle-group>
+	<div>
+		<mat-form-field fxFlex class="search">
+			<input #input matInput placeholder="Search" (keyup)="filterRecipe(input.value, group.value)">
+		</mat-form-field>
+		<button mat-icon-button class="icon" (click)="filter()"><mat-icon>filter_list</mat-icon></button>
+	</div>
+	<!-- <mat-spinner *ngIf="resourcesLoaded === false" style="margin:0 auto;" mode="indeterminate"></mat-spinner> -->
+	<div class="loading" *ngIf="resourcesLoaded === false">
+		<div class="ring"></div>
+		<span class="text-loading">loading...</span>
+	</div>
+	<div *ngIf="recipeList">
+		<div style="margin-top: 20px;">
+			<div *ngIf="recipeList.length; else empty">
+				<div *ngFor="let recipe of recipeList" style="margin-bottom: 10px;">
+					<mat-card *ngIf="recipe.titles[group.value]" routerLink="/recipeEntry/{{ recipe.id }}/{{ group.value }}">
+						<mat-card-title>
+							<span class="title">{{ recipe.titles[group.value] }}</span>
+							<span *ngIf="recipe.cooking_type['en'] === 'Vegetarian'">&nbsp;<mat-icon>spa</mat-icon></span>
+							<span fxLayout>
+								<span><button mat-icon-button (click)="addFavorite($event, recipe)" *ngIf="!favorites.includes(recipe.id)"><mat-icon>favorite_outline</mat-icon></button></span>
+								<span><button mat-icon-button (click)="removeFavorite($event, recipe)" *ngIf="favorites.includes(recipe.id)"><mat-icon>favorite</mat-icon></button></span>
+								<span><button mat-icon-button (click)="addToDB($event, recipe)"><mat-icon>add</mat-icon></button></span>
+							</span>
+						</mat-card-title>
+						<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>
+						<mat-card-subtitle *ngIf="recipe.titles[group.value] !== recipe.intro_text[group.value]">{{ recipe.intro_text[group.value] }}</mat-card-subtitle>
+						<mat-card-content>
+							<ul>
+								<div *ngFor="let ingredient of recipe.ingredients[group.value]; index as i">
+									<div *ngIf="i <= 4">
+										<li *ngIf="!ingredient.includes('**'); else tag">
+											<span>{{ ingredient }}</span>
+										</li>
+										<ng-template #tag>
+											<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>
+										</ng-template>
+									</div>
+								</div>
+								<li *ngIf="recipe.ingredients[group.value].length != 5">...</li>
+							</ul>
+							<span>{{ recipe.preparation_text[group.value].substring(0, 135) }}...</span>
+						</mat-card-content>
+					</mat-card>
+				</div>
+			</div>
+			<ng-template #empty>
+				<span>Currently no recipes on the server. Be patient...</span>
+			</ng-template>
+		</div>
+	</div>
+</div>

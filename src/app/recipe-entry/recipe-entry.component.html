@@ -1,0 +1,37 @@
+<div class="body">
+	<div *ngIf="recipe">
+		<div style="margin-bottom: 10px;">
+			<button mat-raised-button (click)="generateImage()" color="primary">Generate image</button>
+			<button mat-raised-button (click)="generatePDF()" color="primary" style="margin-left: 10px;">Save Recipe</button>
+		</div>
+		<mat-card id="recipeContainer" *ngIf="recipe.titles[lang]" routerLink="/recipeEntry/{{ recipe.id }}/{{ lang }}">
+			<mat-card-title>{{ recipe.titles[lang] }}</mat-card-title>
+			<mat-card-subtitle>{{ recipe.preparation_time }}</mat-card-subtitle>
+			<mat-card-subtitle *ngIf="recipe.titles[lang] !== recipe.intro_text[lang]">{{ recipe.intro_text[lang] }}</mat-card-subtitle>
+			<mat-card-content>
+				<img [src]="imageText" class="image" *ngIf="imageText !== 'data:image/png;base64, ' && imageLoaded === true; else no">
+				<ng-template #no>
+					<mat-spinner *ngIf="buttonClicked === true" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+				</ng-template>
+				<div><strong>Ingredients: </strong></div>
+				<ul>
+					<div *ngFor="let ingredient of recipe.ingredients[lang]">
+						<li *ngIf="!ingredient.includes('**'); else tag">
+							<span>{{ ingredient }}</span>
+						</li>
+						<ng-template #tag>
+							<h3>{{ removeStarsInIngreidents(ingredient) }}</h3>
+						</ng-template>
+					</div>
+				</ul>
+				<div *ngIf="recipe.additional_text[lang]">
+					<a [href]="recipe.additional_text[lang]"><strong>Click here</strong></a>
+					<span> to view preparation video</span>
+					<br>
+				</div>
+				<br>
+				<span>{{ recipe.preparation_text[lang] }}</span>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>
